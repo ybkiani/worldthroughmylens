@@ -1,611 +1,1330 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>YBK Travel Diaries | Explore • Experience • Remember</title>
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+    YBK Travel Diaries | Explore • Experience • Remember
+  </title>
 
   <meta name="description"
         content="YBK Travel Diaries — travel stories, videos, destinations and unforgettable moments.">
 
-  <!-- Font Awesome -->
+
+  <!-- FONT AWESOME ICONS -->
+
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet">
-
-  <style>
-
-    /* =========================
-       BASIC SETTINGS
-    ========================== */
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
 
-    body {
-      font-family: "DM Sans", sans-serif;
-      background: #071b1a;
-      color: white;
-      overflow-x: hidden;
-    }
+  <!-- GOOGLE FONTS -->
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
 
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-    /* =========================
-       NAVIGATION
-    ========================== */
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
 
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1000;
 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+<style>
 
-      padding: 18px 7%;
 
-      background: rgba(4, 25, 24, 0.70);
-      backdrop-filter: blur(15px);
+/* ==================================================
+   BASIC SETTINGS
+================================================== */
 
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .logo {
-      font-family: "Playfair Display", serif;
-      font-size: 23px;
-      font-weight: 700;
-    }
 
-    .logo span {
-      color: #e8b86d;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-    }
 
-    .nav-links a {
-      font-size: 14px;
-      opacity: .85;
-      transition: .3s;
-    }
+body {
 
-    .nav-links a:hover {
-      color: #e8b86d;
-      opacity: 1;
-    }
+  font-family: "DM Sans", sans-serif;
 
+  background: #071b1a;
 
-    /* =========================
-       HERO
-    ========================== */
+  color: white;
 
-    .hero {
-      min-height: 100vh;
+  overflow-x: hidden;
+}
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
 
-      text-align: center;
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-      padding: 110px 20px 60px;
 
-      position: relative;
-      overflow: hidden;
 
-      background:
-        radial-gradient(circle at 15% 30%, rgba(25,140,121,.38), transparent 30%),
-        radial-gradient(circle at 85% 65%, rgba(225,168,87,.22), transparent 30%),
-        linear-gradient(135deg, #061716, #0b3430 55%, #061716);
-    }
+/* ==================================================
+   NAVIGATION
+================================================== */
 
-    .hero::before {
-      content: "";
-      position: absolute;
+nav {
 
-      width: 550px;
-      height: 550px;
+  position: fixed;
 
-      border-radius: 50%;
+  width: 100%;
 
-      background: rgba(42,165,143,.12);
+  top: 0;
+  left: 0;
 
-      filter: blur(50px);
+  z-index: 1000;
 
-      top: -200px;
-      right: -120px;
+  display: flex;
 
-      animation: float 8s ease-in-out infinite;
-    }
+  justify-content: space-between;
 
-    .hero::after {
-      content: "";
-      position: absolute;
+  align-items: center;
 
-      width: 450px;
-      height: 450px;
+  padding: 12px 7%;
 
-      border-radius: 50%;
+  background: rgba(4,25,24,.78);
 
-      background: rgba(232,184,109,.10);
+  backdrop-filter: blur(15px);
 
-      filter: blur(50px);
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
+}
 
-      bottom: -170px;
-      left: -120px;
 
-      animation: float 10s ease-in-out infinite reverse;
-    }
 
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(40px); }
-    }
+/* NAV LOGO */
 
-    .hero-content {
-      max-width: 900px;
-      position: relative;
-      z-index: 5;
-    }
+.logo {
 
-    .mini-title {
-      color: #e8b86d;
+  display: flex;
 
-      letter-spacing: 5px;
-      text-transform: uppercase;
+  align-items: center;
 
-      font-size: 13px;
+}
 
-      margin-bottom: 20px;
-    }
 
-    h1 {
-      font-family: "Playfair Display", serif;
+.logo img {
 
-      font-size: clamp(52px, 8vw, 105px);
+  width: 190px;
 
-      line-height: .95;
+  height: auto;
 
-      margin-bottom: 28px;
-    }
+  display: block;
 
-    h1 span {
-      display: block;
+  object-fit: contain;
 
-      background: linear-gradient(90deg,#e8b86d,#fff1c9,#e8b86d);
+  transition: transform .3s ease;
 
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+}
 
-    .hero p {
-      max-width: 650px;
 
-      margin: auto;
+.logo:hover img {
 
-      font-size: 18px;
-      line-height: 1.7;
+  transform: scale(1.04);
 
-      color: rgba(255,255,255,.75);
-    }
+}
 
 
-    /* =========================
-       SOCIAL BUTTONS
-    ========================== */
 
-    .social-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+/* NAV LINKS */
 
-      gap: 15px;
+.nav-links {
 
-      margin-top: 35px;
-    }
+  display: flex;
 
-    .social-btn {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+  gap: 28px;
 
-      padding: 14px 22px;
+  align-items: center;
 
-      border-radius: 50px;
+}
 
-      border: 1px solid rgba(255,255,255,.18);
 
-      background: rgba(255,255,255,.08);
+.nav-links a {
 
-      backdrop-filter: blur(12px);
+  font-size: 14px;
 
-      transition: .3s;
-    }
+  opacity: .85;
 
-    .social-btn:hover {
-      transform: translateY(-5px);
-      background: white;
-      color: #071b1a;
-    }
+  transition: .3s;
 
-    .social-btn i {
-      font-size: 20px;
-    }
+}
 
 
-    /* =========================
-       SCROLL
-    ========================== */
+.nav-links a:hover {
 
-    .scroll {
-      position: absolute;
-      bottom: 25px;
+  color: #e8b86d;
 
-      left: 50%;
-      transform: translateX(-50%);
+  opacity: 1;
 
-      font-size: 12px;
-      letter-spacing: 3px;
+}
 
-      opacity: .5;
-    }
 
 
-    /* =========================
-       SOCIAL SECTION
-    ========================== */
+/* ==================================================
+   HERO
+================================================== */
 
-    .section {
-      padding: 100px 7%;
-    }
+.hero {
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 55px;
-    }
+  min-height: 100vh;
 
-    .section-title small {
-      color: #e8b86d;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
+  display: flex;
 
-    .section-title h2 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(38px,5vw,60px);
-      margin-top: 10px;
-    }
+  align-items: center;
 
+  justify-content: center;
 
-    /* =========================
-       CARDS
-    ========================== */
+  text-align: center;
 
-    .cards {
-      max-width: 1150px;
+  padding:
 
-      margin: auto;
+    130px
+    20px
+    70px;
 
-      display: grid;
+  position: relative;
 
-      grid-template-columns: repeat(3,1fr);
+  overflow: hidden;
 
-      gap: 25px;
-    }
 
-    .card {
-      min-height: 390px;
+  background:
 
-      border-radius: 25px;
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(25,140,121,.38),
+      transparent 30%
+    ),
 
-      padding: 35px;
+    radial-gradient(
+      circle at 85% 65%,
+      rgba(225,168,87,.22),
+      transparent 30%
+    ),
 
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    linear-gradient(
+      135deg,
+      #061716,
+      #0b3430 55%,
+      #061716
+    );
 
-      position: relative;
-      overflow: hidden;
+}
 
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,.10),
-          rgba(255,255,255,.03)
-        );
 
-      border: 1px solid rgba(255,255,255,.12);
 
-      transition: .4s;
-    }
+/* ANIMATED BACKGROUND */
 
-    .card:hover {
-      transform: translateY(-10px);
-      border-color: #e8b86d;
-    }
+.hero::before {
 
-    .card-icon {
-      width: 70px;
-      height: 70px;
+  content: "";
 
-      border-radius: 20px;
+  position: absolute;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  width: 550px;
 
-      font-size: 31px;
+  height: 550px;
 
-      background: rgba(255,255,255,.10);
-    }
+  border-radius: 50%;
 
-    .card h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 31px;
-      margin-top: 35px;
-    }
+  background:
+    rgba(42,165,143,.12);
 
-    .card p {
-      color: rgba(255,255,255,.65);
+  filter: blur(50px);
 
-      line-height: 1.6;
+  top: -200px;
 
-      margin-top: 12px;
-    }
+  right: -120px;
 
-    .visit {
-      margin-top: 35px;
+  animation:
+    float 8s ease-in-out infinite;
 
-      display: inline-flex;
-      align-items: center;
+}
 
-      gap: 10px;
 
-      color: #e8b86d;
+.hero::after {
 
-      font-weight: 600;
-    }
+  content: "";
 
-    .visit i {
-      transition: .3s;
-    }
+  position: absolute;
 
-    .card:hover .visit i {
-      transform: translateX(7px);
-    }
+  width: 450px;
 
+  height: 450px;
 
-    /* INSTAGRAM */
+  border-radius: 50%;
 
-    .instagram:hover {
-      background:
-        linear-gradient(
-          145deg,
-          rgba(193,53,132,.25),
-          rgba(255,255,255,.04)
-        );
-    }
+  background:
+    rgba(232,184,109,.10);
 
+  filter: blur(50px);
 
-    /* YOUTUBE */
+  bottom: -170px;
 
-    .youtube:hover {
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,0,0,.22),
-          rgba(255,255,255,.04)
-        );
-    }
+  left: -120px;
 
+  animation:
+    float 10s ease-in-out infinite reverse;
 
-    /* THREADS */
+}
 
-    .threads:hover {
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,.16),
-          rgba(255,255,255,.04)
-        );
-    }
 
+@keyframes float {
 
-    /* =========================
-       TRAVEL QUOTE
-    ========================== */
+  0%,100% {
 
-    .travel-banner {
-      padding: 100px 20px;
+    transform: translateY(0);
 
-      text-align: center;
+  }
 
-      background:
-        linear-gradient(
-          rgba(3,24,23,.75),
-          rgba(3,24,23,.75)
-        ),
-        radial-gradient(circle at center,#17635a,#071b1a);
-    }
+  50% {
 
-    .travel-banner h2 {
-      max-width: 850px;
+    transform: translateY(40px);
 
-      margin: auto;
+  }
 
-      font-family: "Playfair Display", serif;
+}
 
-      font-size: clamp(35px,5vw,65px);
-    }
 
-    .travel-banner span {
-      color: #e8b86d;
-    }
 
+/* HERO CONTENT */
 
-    /* =========================
-       FOOTER
-    ========================== */
+.hero-content {
 
-    footer {
-      text-align: center;
+  max-width: 900px;
 
-      padding: 45px 20px;
+  position: relative;
 
-      border-top: 1px solid rgba(255,255,255,.08);
-    }
+  z-index: 5;
 
-    footer p {
-      opacity: .55;
-      font-size: 14px;
-    }
+}
 
-    .footer-socials {
-      display: flex;
-      justify-content: center;
 
-      gap: 18px;
 
-      margin-bottom: 20px;
-    }
+/* LARGE HERO LOGO */
 
-    .footer-socials a {
-      width: 45px;
-      height: 45px;
+.hero-logo {
 
-      border-radius: 50%;
+  width: min(520px,85%);
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  height: auto;
 
-      background: rgba(255,255,255,.08);
+  display: block;
 
-      transition: .3s;
-    }
+  margin: 0 auto 22px;
 
-    .footer-socials a:hover {
-      background: #e8b86d;
-      color: #071b1a;
+  object-fit: contain;
 
-      transform: translateY(-4px);
-    }
+  filter:
+    drop-shadow(
+      0 12px 30px
+      rgba(0,0,0,.28)
+    );
 
+  animation:
+    logoAppear 1.2s ease;
 
-    /* =========================
-       MOBILE
-    ========================== */
+}
 
-    @media(max-width:800px) {
 
-      .nav-links {
-        display: none;
-      }
+@keyframes logoAppear {
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
+  from {
 
-      .hero p {
-        font-size: 16px;
-      }
+    opacity: 0;
 
-      .card {
-        min-height: 330px;
-      }
+    transform:
+      translateY(-15px)
+      scale(.96);
 
-    }
+  }
 
-  </style>
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+  }
+
+}
+
+
+
+/* SMALL HERO TEXT */
+
+.mini-title {
+
+  color: #e8b86d;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  font-size: 13px;
+
+  margin-bottom: 18px;
+
+}
+
+
+
+/* MAIN TITLE */
+
+.travel-title {
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(
+      52px,
+      8vw,
+      100px
+    );
+
+  line-height: 1;
+
+  margin-bottom: 28px;
+
+}
+
+
+.travel-title span {
+
+  display: block;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #e8b86d,
+      #fff1c9,
+      #e8b86d
+    );
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  color: transparent;
+
+}
+
+
+
+/* HERO DESCRIPTION */
+
+.hero p {
+
+  max-width: 650px;
+
+  margin: auto;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .75
+    );
+
+}
+
+
+
+/* ==================================================
+   SOCIAL BUTTONS
+================================================== */
+
+.social-buttons {
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-top: 35px;
+
+}
+
+
+.social-btn {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    14px 22px;
+
+  border-radius:
+    50px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      .18
+    );
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .08
+    );
+
+  backdrop-filter:
+    blur(12px);
+
+  transition:
+    transform .3s,
+    background .3s,
+    color .3s;
+
+}
+
+
+.social-btn:hover {
+
+  transform:
+    translateY(-5px);
+
+  background:
+    white;
+
+  color:
+    #071b1a;
+
+}
+
+
+.social-btn i {
+
+  font-size:
+    20px;
+
+}
+
+
+
+/* ==================================================
+   SCROLL INDICATOR
+================================================== */
+
+.scroll {
+
+  position:
+    absolute;
+
+  bottom:
+    25px;
+
+  left:
+    50%;
+
+  transform:
+    translateX(-50%);
+
+  font-size:
+    12px;
+
+  letter-spacing:
+    3px;
+
+  opacity:
+    .5;
+
+  animation:
+    scrollBounce
+    2s infinite;
+
+}
+
+
+@keyframes scrollBounce {
+
+  0%,100% {
+
+    transform:
+      translateX(-50%)
+      translateY(0);
+
+  }
+
+  50% {
+
+    transform:
+      translateX(-50%)
+      translateY(7px);
+
+  }
+
+}
+
+
+
+/* ==================================================
+   STANDARD SECTION
+================================================== */
+
+.section {
+
+  padding:
+    100px 7%;
+
+}
+
+
+.section-title {
+
+  text-align:
+    center;
+
+  margin-bottom:
+    55px;
+
+}
+
+
+.section-title small {
+
+  color:
+    #e8b86d;
+
+  letter-spacing:
+    4px;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.section-title h2 {
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(
+      38px,
+      5vw,
+      60px
+    );
+
+  margin-top:
+    10px;
+
+}
+
+
+
+/* ==================================================
+   SOCIAL CARDS
+================================================== */
+
+.cards {
+
+  max-width:
+    1150px;
+
+  margin:
+    auto;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:
+    25px;
+
+}
+
+
+.card {
+
+  min-height:
+    390px;
+
+  border-radius:
+    25px;
+
+  padding:
+    35px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    space-between;
+
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,.03)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,.12);
+
+  transition:
+    .4s;
+
+}
+
+
+.card:hover {
+
+  transform:
+    translateY(-10px);
+
+  border-color:
+    #e8b86d;
+
+}
+
+
+.card-icon {
+
+  width:
+    70px;
+
+  height:
+    70px;
+
+  border-radius:
+    20px;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  font-size:
+    31px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .10
+    );
+
+}
+
+
+.card h3 {
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    31px;
+
+  margin-top:
+    35px;
+
+}
+
+
+.card p {
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .65
+    );
+
+  line-height:
+    1.6;
+
+  margin-top:
+    12px;
+
+}
+
+
+.visit {
+
+  margin-top:
+    35px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  color:
+    #e8b86d;
+
+  font-weight:
+    600;
+
+}
+
+
+.visit i {
+
+  transition:
+    .3s;
+
+}
+
+
+.card:hover
+.visit i {
+
+  transform:
+    translateX(7px);
+
+}
+
+
+
+/* INSTAGRAM */
+
+.instagram:hover {
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(193,53,132,.25),
+      rgba(255,255,255,.04)
+    );
+
+}
+
+
+
+/* YOUTUBE */
+
+.youtube:hover {
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,0,0,.22),
+      rgba(255,255,255,.04)
+    );
+
+}
+
+
+
+/* THREADS */
+
+.threads:hover {
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.16),
+      rgba(255,255,255,.04)
+    );
+
+}
+
+
+
+/* ==================================================
+   TRAVEL BANNER
+================================================== */
+
+.travel-banner {
+
+  padding:
+    100px 20px;
+
+  text-align:
+    center;
+
+  background:
+
+    linear-gradient(
+      rgba(3,24,23,.75),
+      rgba(3,24,23,.75)
+    ),
+
+    radial-gradient(
+      circle at center,
+      #17635a,
+      #071b1a
+    );
+
+}
+
+
+.travel-banner h2 {
+
+  max-width:
+    850px;
+
+  margin:
+    auto;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(
+      35px,
+      5vw,
+      65px
+    );
+
+}
+
+
+.travel-banner span {
+
+  color:
+    #e8b86d;
+
+}
+
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+
+  text-align:
+    center;
+
+  padding:
+    45px 20px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.08);
+
+}
+
+
+.footer-logo {
+
+  width:
+    min(260px,70%);
+
+  height:
+    auto;
+
+  margin:
+    0 auto 28px;
+
+  display:
+    block;
+
+  opacity:
+    .9;
+
+}
+
+
+.footer-socials {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  gap:
+    18px;
+
+  margin-bottom:
+    20px;
+
+}
+
+
+.footer-socials a {
+
+  width:
+    45px;
+
+  height:
+    45px;
+
+  border-radius:
+    50%;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .08
+    );
+
+  transition:
+    .3s;
+
+}
+
+
+.footer-socials a:hover {
+
+  background:
+    #e8b86d;
+
+  color:
+    #071b1a;
+
+  transform:
+    translateY(-4px);
+
+}
+
+
+footer p {
+
+  opacity:
+    .55;
+
+  font-size:
+    14px;
+
+}
+
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media(max-width:800px) {
+
+
+  nav {
+
+    padding:
+      10px 5%;
+
+  }
+
+
+  .logo img {
+
+    width:
+      145px;
+
+  }
+
+
+  .nav-links {
+
+    display:
+      none;
+
+  }
+
+
+  .hero {
+
+    padding:
+      115px 18px 70px;
+
+  }
+
+
+  .hero-logo {
+
+    width:
+      min(
+        360px,
+        90%
+      );
+
+    margin-bottom:
+      20px;
+
+  }
+
+
+  .mini-title {
+
+    font-size:
+      11px;
+
+    letter-spacing:
+      3px;
+
+  }
+
+
+  .travel-title {
+
+    font-size:
+      clamp(
+        45px,
+        15vw,
+        70px
+      );
+
+  }
+
+
+  .hero p {
+
+    font-size:
+      16px;
+
+  }
+
+
+  .cards {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .card {
+
+    min-height:
+      330px;
+
+  }
+
+
+  .section {
+
+    padding:
+      75px 20px;
+
+  }
+
+}
+
+
+
+/* ==================================================
+   REDUCED MOTION ACCESSIBILITY
+================================================== */
+
+@media
+(prefers-reduced-motion:reduce) {
+
+  html {
+
+    scroll-behavior:
+      auto;
+
+  }
+
+  *,
+  *::before,
+  *::after {
+
+    animation:
+      none !important;
+
+    transition:
+      none !important;
+
+  }
+
+}
+
+
+</style>
 
 </head>
+
+
 
 <body>
 
 
-<!-- =========================
+
+<!-- ==================================================
      NAVIGATION
-========================== -->
+================================================== -->
 
 <nav>
 
-  <div class="logo">
-    YBK <span>Travel Diaries</span>
-  </div>
+
+  <a href="#home"
+     class="logo">
+
+    <img
+      src="images/ybk-logo.png"
+      alt="YBK - Yasser Bilal Kiani">
+
+  </a>
+
+
 
   <div class="nav-links">
 
-    <a href="#home">Home</a>
 
-    <a href="#socials">Follow</a>
-
-    <a href="https://www.youtube.com/@yasserbilalkiani"
-       target="_blank">
-       Videos
+    <a href="#home">
+      Home
     </a>
 
+
+    <a href="#socials">
+      Follow
+    </a>
+
+
+    <a
+      href="https://www.youtube.com/@yasserbilalkiani"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      Videos
+
+    </a>
+
+
   </div>
+
 
 </nav>
 
 
 
-<!-- =========================
+<!-- ==================================================
      HERO
-========================== -->
+================================================== -->
 
-<section class="hero" id="home">
+<section
+  class="hero"
+  id="home">
+
 
   <div class="hero-content">
 
+
+    <!-- LARGE YBK LOGO -->
+
+    <img
+      src="images/ybk-logo.png"
+      class="hero-logo"
+      alt="YBK - Yasser Bilal Kiani">
+
+
+
     <div class="mini-title">
+
       Explore • Experience • Remember
+
     </div>
 
-    <h1>
-      YBK
-      <span>Travel Diaries</span>
+
+
+    <!-- MAIN TITLE -->
+
+    <h1 class="travel-title">
+
+      <span>
+        Travel Diaries
+      </span>
+
     </h1>
 
+
+
     <p>
-      Exploring places, cultures and unforgettable experiences.
-      Follow the journey through photographs, travel stories,
-      videos and moments from around the world.
+
+      Exploring places, cultures and
+      unforgettable experiences.
+
+      Follow the journey through
+      photographs, travel stories,
+      videos and memorable moments
+      from around the world.
+
     </p>
 
+
+
+    <!-- SOCIAL BUTTONS -->
 
     <div class="social-buttons">
 
 
-      <!-- INSTAGRAM -->
-
-      <a class="social-btn"
-         href="https://www.instagram.com/ybktraveldiaries/"
-         target="_blank">
+      <a
+        class="social-btn"
+        href="https://www.instagram.com/ybktraveldiaries/"
+        target="_blank"
+        rel="noopener noreferrer">
 
         <i class="fa-brands fa-instagram"></i>
 
@@ -614,11 +1333,12 @@
       </a>
 
 
-      <!-- YOUTUBE -->
 
-      <a class="social-btn"
-         href="https://www.youtube.com/@yasserbilalkiani"
-         target="_blank">
+      <a
+        class="social-btn"
+        href="https://www.youtube.com/@yasserbilalkiani"
+        target="_blank"
+        rel="noopener noreferrer">
 
         <i class="fa-brands fa-youtube"></i>
 
@@ -627,11 +1347,12 @@
       </a>
 
 
-      <!-- THREADS -->
 
-      <a class="social-btn"
-         href="https://www.threads.com/@ybktraveldiaries"
-         target="_blank">
+      <a
+        class="social-btn"
+        href="https://www.threads.com/@ybktraveldiaries"
+        target="_blank"
+        rel="noopener noreferrer">
 
         <i class="fa-brands fa-threads"></i>
 
@@ -639,44 +1360,72 @@
 
       </a>
 
+
     </div>
 
+
   </div>
+
 
 
   <div class="scroll">
+
     SCROLL ↓
+
   </div>
+
 
 </section>
 
 
 
-<!-- =========================
-     SOCIAL MEDIA
-========================== -->
+<!-- ==================================================
+     SOCIAL MEDIA SECTION
+================================================== -->
 
-<section class="section" id="socials">
+<section
+  class="section"
+  id="socials">
+
 
   <div class="section-title">
 
-    <small>Follow the Journey</small>
 
-    <h2>Travel With YBK</h2>
+    <small>
+
+      Follow the Journey
+
+    </small>
+
+
+    <h2>
+
+      Travel With YBK
+
+    </h2>
+
 
   </div>
+
 
 
   <div class="cards">
 
 
-    <!-- INSTAGRAM CARD -->
 
-    <a class="card instagram"
-       href="https://www.instagram.com/ybktraveldiaries/"
-       target="_blank">
+    <!-- ======================
+         INSTAGRAM
+    ======================= -->
+
+    <a
+      class="card instagram"
+      href="https://www.instagram.com/ybktraveldiaries/"
+      target="_blank"
+      rel="noopener noreferrer">
+
 
       <div>
+
 
         <div class="card-icon">
 
@@ -684,14 +1433,27 @@
 
         </div>
 
-        <h3>Instagram</h3>
+
+        <h3>
+
+          Instagram
+
+        </h3>
+
 
         <p>
-          Travel photography, beautiful destinations,
-          reels and memorable moments from our journeys.
+
+          Discover travel photography,
+          beautiful destinations,
+          reels and memorable moments
+          from our journeys.
+
         </p>
 
+
       </div>
+
+
 
       <div class="visit">
 
@@ -701,17 +1463,24 @@
 
       </div>
 
+
     </a>
 
 
 
-    <!-- YOUTUBE CARD -->
+    <!-- ======================
+         YOUTUBE
+    ======================= -->
 
-    <a class="card youtube"
-       href="https://www.youtube.com/@yasserbilalkiani"
-       target="_blank">
+    <a
+      class="card youtube"
+      href="https://www.youtube.com/@yasserbilalkiani"
+      target="_blank"
+      rel="noopener noreferrer">
+
 
       <div>
+
 
         <div class="card-icon">
 
@@ -719,14 +1488,27 @@
 
         </div>
 
-        <h3>YouTube</h3>
+
+        <h3>
+
+          YouTube
+
+        </h3>
+
 
         <p>
-          Watch our travel videos, experiences,
-          destinations and adventures.
+
+          Watch travel videos,
+          destination experiences
+          and adventures from
+          YBK Travel Diaries.
+
         </p>
 
+
       </div>
+
+
 
       <div class="visit">
 
@@ -736,17 +1518,24 @@
 
       </div>
 
+
     </a>
 
 
 
-    <!-- THREADS CARD -->
+    <!-- ======================
+         THREADS
+    ======================= -->
 
-    <a class="card threads"
-       href="https://www.threads.com/@ybktraveldiaries"
-       target="_blank">
+    <a
+      class="card threads"
+      href="https://www.threads.com/@ybktraveldiaries"
+      target="_blank"
+      rel="noopener noreferrer">
+
 
       <div>
+
 
         <div class="card-icon">
 
@@ -754,14 +1543,26 @@
 
         </div>
 
-        <h3>Threads</h3>
+
+        <h3>
+
+          Threads
+
+        </h3>
+
 
         <p>
-          Quick travel updates, thoughts,
-          recommendations and stories along the way.
+
+          Follow quick travel updates,
+          thoughts, recommendations
+          and stories along the way.
+
         </p>
 
+
       </div>
+
+
 
       <div class="visit">
 
@@ -771,71 +1572,105 @@
 
       </div>
 
+
     </a>
 
 
   </div>
 
+
 </section>
 
 
 
-<!-- =========================
+<!-- ==================================================
      TRAVEL BANNER
-========================== -->
+================================================== -->
 
 <section class="travel-banner">
+
 
   <h2>
 
     The world is full of stories.
 
-    <span>Let's discover them.</span>
+    <span>
+
+      Let's discover them.
+
+    </span>
 
   </h2>
+
 
 </section>
 
 
 
-<!-- =========================
+<!-- ==================================================
      FOOTER
-========================== -->
+================================================== -->
 
 <footer>
 
 
+  <!-- YBK LOGO -->
+
+  <img
+    src="images/ybk-logo.png"
+    class="footer-logo"
+    alt="YBK - Yasser Bilal Kiani">
+
+
+
   <div class="footer-socials">
 
-    <a href="https://www.instagram.com/ybktraveldiaries/"
-       target="_blank">
+
+    <a
+      href="https://www.instagram.com/ybktraveldiaries/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="YBK Travel Diaries on Instagram">
 
       <i class="fa-brands fa-instagram"></i>
 
     </a>
 
 
-    <a href="https://www.youtube.com/@yasserbilalkiani"
-       target="_blank">
+
+    <a
+      href="https://www.youtube.com/@yasserbilalkiani"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="YBK on YouTube">
 
       <i class="fa-brands fa-youtube"></i>
 
     </a>
 
 
-    <a href="https://www.threads.com/@ybktraveldiaries"
-       target="_blank">
+
+    <a
+      href="https://www.threads.com/@ybktraveldiaries"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="YBK Travel Diaries on Threads">
 
       <i class="fa-brands fa-threads"></i>
 
     </a>
 
+
   </div>
 
 
+
   <p>
-    © <span id="year"></span> YBK Travel Diaries.
+
+    © <span id="year"></span>
+    YBK Travel Diaries.
     All rights reserved.
+
   </p>
 
 
@@ -843,61 +1678,107 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      JAVASCRIPT
-========================== -->
+================================================== -->
 
 <script>
 
-  /* Automatically updates copyright year */
 
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
+/* AUTOMATIC COPYRIGHT YEAR */
 
-
-  /* Small animation when cards enter screen */
-
-  const cards =
-    document.querySelectorAll(".card");
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 
 
-  const observer =
-    new IntersectionObserver(entries => {
 
-      entries.forEach(entry => {
+/* ==================================================
+   SCROLL REVEAL
+================================================== */
 
-        if(entry.isIntersecting){
+const cards =
+  document.querySelectorAll(".card");
 
-          entry.target.style.opacity = "1";
 
-          entry.target.style.transform =
-            "translateY(0)";
+const observer =
+  new IntersectionObserver(
+
+    entries => {
+
+
+      entries.forEach(
+
+        entry => {
+
+
+          if(
+            entry.isIntersecting
+          ) {
+
+
+            entry.target.style.opacity =
+              "1";
+
+
+            entry.target.style.transform =
+              "translateY(0)";
+
+
+            observer.unobserve(
+              entry.target
+            );
+
+
+          }
+
 
         }
 
-      });
+      );
 
-    },{
+
+    },
+
+    {
+
       threshold: .15
-    });
+
+    }
+
+  );
 
 
-  cards.forEach(card => {
 
-    card.style.opacity = "0";
+cards.forEach(
+
+  card => {
+
+
+    card.style.opacity =
+      "0";
+
 
     card.style.transform =
       "translateY(35px)";
 
+
     card.style.transition =
       "opacity .7s ease, transform .7s ease, background .4s ease, border .4s ease";
 
-    observer.observe(card);
 
-  });
+    observer.observe(
+      card
+    );
+
+
+  }
+
+);
+
 
 </script>
 
 
 </body>
+
 </html>
