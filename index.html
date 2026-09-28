@@ -2,66 +2,103 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>YBK Travel Diaries | Explore • Experience • Remember</title>
 
 <meta name="description"
 content="YBK Travel Diaries — exploring destinations, cultures, travel stories and unforgettable experiences around the world.">
 
+
 <!-- FONT AWESOME -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<!-- GOOGLE FONTS -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+<!-- GOOGLE FONTS -->
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
 rel="stylesheet">
 
+
 <style>
+
 
 /* =========================================================
    GLOBAL
 ========================================================= */
 
 :root {
+
   --green:#007966;
   --green-dark:#123b34;
   --gold:#c99545;
+
   --cream:#f7f2e8;
   --cream-light:#fffdf8;
+
   --text:#172421;
   --muted:#60716c;
+
 }
+
 
 * {
+
   margin:0;
   padding:0;
+
   box-sizing:border-box;
+
 }
+
 
 html {
+
   scroll-behavior:smooth;
+
 }
+
 
 body {
+
   font-family:"DM Sans",sans-serif;
+
   background:var(--cream);
+
   color:var(--text);
+
   overflow-x:hidden;
+
 }
+
 
 a {
+
   text-decoration:none;
+
   color:inherit;
+
 }
 
+
 button {
+
   font:inherit;
+
 }
+
 
 
 /* =========================================================
@@ -69,62 +106,114 @@ button {
 ========================================================= */
 
 nav {
+
   position:fixed;
+
   width:100%;
+
   top:0;
   left:0;
+
   z-index:1000;
 
+
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
+
 
   padding:11px 7%;
 
-  background:rgba(255,252,245,.94);
 
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
+  background:
+  rgba(255,252,245,.94);
 
-  border-bottom:1px solid rgba(0,105,88,.12);
 
-  box-shadow:0 5px 30px rgba(35,65,55,.05);
+  backdrop-filter:
+  blur(16px);
+
+  -webkit-backdrop-filter:
+  blur(16px);
+
+
+  border-bottom:
+  1px solid rgba(0,105,88,.12);
+
+
+  box-shadow:
+  0 5px 30px rgba(35,65,55,.05);
+
 }
+
 
 .logo {
+
   display:flex;
+
   align-items:center;
+
 }
+
 
 .logo img {
+
   width:190px;
+
   height:auto;
+
   display:block;
-  transition:.3s;
+
+
+  transition:
+  transform .3s ease;
+
 }
+
 
 .logo:hover img {
-  transform:scale(1.04);
+
+  transform:
+  scale(1.04);
+
 }
+
 
 .nav-links {
+
   display:flex;
+
   gap:30px;
+
   align-items:center;
+
 }
+
 
 .nav-links a {
+
   font-size:14px;
+
   font-weight:600;
+
   color:#183a34;
+
   opacity:.82;
+
   transition:.3s;
+
 }
 
+
 .nav-links a:hover {
+
   color:var(--green);
+
   opacity:1;
+
 }
+
 
 
 /* =========================================================
@@ -132,27 +221,42 @@ nav {
 ========================================================= */
 
 .hero {
+
   min-height:100vh;
 
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
 
   text-align:center;
 
-  padding:135px 20px 80px;
+
+  padding:
+  135px 20px 80px;
+
 
   position:relative;
+
   overflow:hidden;
 
-  background:
-  radial-gradient(circle at 15% 30%,
-  rgba(0,125,105,.13),
-  transparent 32%),
 
-  radial-gradient(circle at 85% 65%,
+  background:
+
+  radial-gradient(
+  circle at 15% 30%,
+  rgba(0,125,105,.13),
+  transparent 32%
+  ),
+
+  radial-gradient(
+  circle at 85% 65%,
   rgba(218,174,104,.22),
-  transparent 32%),
+  transparent 32%
+  ),
 
   linear-gradient(
   135deg,
@@ -160,124 +264,235 @@ nav {
   #f3ead9 55%,
   #faf6ed
   );
+
 }
+
 
 .hero::before {
+
   content:"";
+
   position:absolute;
+
 
   width:500px;
+
   height:500px;
 
+
   border-radius:50%;
 
-  background:rgba(0,130,108,.07);
 
-  filter:blur(25px);
+  background:
+  rgba(0,130,108,.07);
+
+
+  filter:
+  blur(25px);
+
 
   top:-200px;
+
   right:-150px;
 
-  animation:floatOne 9s ease-in-out infinite;
+
+  animation:
+  floatOne 9s ease-in-out infinite;
+
 }
 
+
 .hero::after {
+
   content:"";
+
   position:absolute;
 
+
   width:430px;
+
   height:430px;
+
 
   border-radius:50%;
 
-  background:rgba(213,164,82,.10);
 
-  filter:blur(30px);
+  background:
+  rgba(213,164,82,.10);
+
+
+  filter:
+  blur(30px);
+
 
   bottom:-170px;
+
   left:-130px;
 
-  animation:floatTwo 11s ease-in-out infinite;
+
+  animation:
+  floatTwo 11s ease-in-out infinite;
+
 }
+
 
 @keyframes floatOne {
-  0%,100% {transform:translateY(0);}
-  50% {transform:translateY(35px);}
+
+  0%,100% {
+
+    transform:
+    translateY(0);
+
+  }
+
+
+  50% {
+
+    transform:
+    translateY(35px);
+
+  }
+
 }
+
 
 @keyframes floatTwo {
-  0%,100% {transform:translateY(0);}
-  50% {transform:translateY(-30px);}
+
+  0%,100% {
+
+    transform:
+    translateY(0);
+
+  }
+
+
+  50% {
+
+    transform:
+    translateY(-30px);
+
+  }
+
 }
+
 
 .hero-content {
+
   max-width:920px;
+
   position:relative;
+
   z-index:5;
+
 }
 
+
 .hero-logo {
-  width:min(540px,85%);
+
+  width:
+  min(540px,85%);
+
+
   height:auto;
+
 
   display:block;
 
-  margin:0 auto 25px;
 
-  filter:drop-shadow(
-  0 12px 20px rgba(20,50,45,.12)
+  margin:
+  0 auto 25px;
+
+
+  filter:
+  drop-shadow(
+  0 12px 20px
+  rgba(20,50,45,.12)
   );
+
 }
 
+
 .mini-title {
+
   color:#9b6b26;
+
 
   letter-spacing:5px;
 
+
   text-transform:uppercase;
 
+
   font-size:13px;
+
   font-weight:700;
 
+
   margin-bottom:18px;
+
 }
 
-.travel-title {
-  font-family:"Playfair Display",serif;
 
-  font-size:clamp(52px,8vw,100px);
+.travel-title {
+
+  font-family:
+  "Playfair Display",
+  serif;
+
+
+  font-size:
+  clamp(52px,8vw,100px);
+
 
   line-height:1;
 
+
   margin-bottom:28px;
+
 }
 
+
 .travel-title span {
+
   display:block;
 
-  background:linear-gradient(
+
+  background:
+  linear-gradient(
   90deg,
   #006b59,
   #00947b,
   #c99545
   );
 
+
   -webkit-background-clip:text;
+
   background-clip:text;
 
+
   color:transparent;
+
 }
 
+
 .hero-description {
+
   max-width:670px;
+
 
   margin:auto;
 
+
   font-size:18px;
+
   line-height:1.75;
 
+
   color:#445650;
+
 }
+
 
 
 /* =========================================================
@@ -285,57 +500,98 @@ nav {
 ========================================================= */
 
 .social-buttons {
+
   display:flex;
 
+
   justify-content:center;
+
 
   flex-wrap:wrap;
 
+
   gap:15px;
 
+
   margin-top:36px;
+
 }
 
+
 .social-btn {
+
   display:flex;
 
+
   align-items:center;
+
   justify-content:center;
+
 
   gap:10px;
 
+
   min-width:145px;
 
-  padding:14px 22px;
+
+  padding:
+  14px 22px;
+
 
   border-radius:50px;
 
-  border:1px solid rgba(0,105,88,.22);
 
-  background:rgba(255,255,255,.68);
+  border:
+  1px solid
+  rgba(0,105,88,.22);
+
+
+  background:
+  rgba(255,255,255,.68);
+
 
   color:#006c5b;
 
+
   font-weight:600;
 
-  box-shadow:0 8px 25px rgba(35,65,55,.08);
+
+  box-shadow:
+  0 8px 25px
+  rgba(35,65,55,.08);
+
 
   transition:.3s;
+
 }
 
-.social-btn:hover {
-  transform:translateY(-5px);
 
-  background:var(--green);
+.social-btn:hover {
+
+  transform:
+  translateY(-5px);
+
+
+  background:
+  var(--green);
+
 
   color:white;
 
-  box-shadow:0 12px 30px rgba(0,105,88,.22);
+
+  box-shadow:
+  0 12px 30px
+  rgba(0,105,88,.22);
+
 }
 
+
 .social-btn i {
+
   font-size:20px;
+
 }
+
 
 
 /* =========================================================
@@ -343,199 +599,324 @@ nav {
 ========================================================= */
 
 .scroll {
+
   position:absolute;
+
 
   bottom:25px;
 
+
   left:50%;
 
-  transform:translateX(-50%);
+
+  transform:
+  translateX(-50%);
+
 
   color:#47645d;
 
+
   font-size:11px;
 
+
   font-weight:700;
+
 
   letter-spacing:3px;
 
+
   opacity:.65;
 
-  animation:scrollBounce 2s infinite;
+
+  animation:
+  scrollBounce 2s infinite;
+
 }
+
 
 @keyframes scrollBounce {
 
+
   0%,100% {
+
     transform:
     translateX(-50%)
     translateY(0);
+
   }
 
+
   50% {
+
     transform:
     translateX(-50%)
     translateY(7px);
+
   }
+
+
 }
 
 
+
 /* =========================================================
-   GENERAL SECTIONS
+   GENERAL SECTION
 ========================================================= */
 
 .section {
-  padding:100px 7%;
+
+  padding:
+  100px 7%;
+
 }
+
 
 .section-heading {
+
   text-align:center;
+
+
   margin-bottom:50px;
+
 }
 
+
 .section-heading small {
+
   color:#9b6b26;
+
 
   letter-spacing:4px;
 
+
   font-weight:700;
 
+
   text-transform:uppercase;
+
 }
 
-.section-heading h2 {
-  font-family:"Playfair Display",serif;
 
-  font-size:clamp(38px,5vw,60px);
+.section-heading h2 {
+
+  font-family:
+  "Playfair Display",
+  serif;
+
+
+  font-size:
+  clamp(38px,5vw,60px);
+
 
   color:#123b34;
 
+
   margin-top:10px;
+
 }
+
 
 .section-heading p {
+
   max-width:700px;
 
-  margin:18px auto 0;
 
-  color:var(--muted);
+  margin:
+  18px auto 0;
+
+
+  color:
+  var(--muted);
+
 
   line-height:1.7;
+
 }
+
 
 
 /* =========================================================
-   REAL WORLD MAP SECTION
+   JOURNEY SECTION
 ========================================================= */
 
 .journey-section {
+
   position:relative;
+
+
   overflow:hidden;
 
+
   background:
+
   radial-gradient(
   circle at 10% 10%,
   rgba(0,121,102,.08),
   transparent 28%
   ),
+
   linear-gradient(
   180deg,
   #fffdf8,
   #f4eee2
   );
+
 }
 
+
 .map-shell {
+
   max-width:1200px;
 
-  margin:0 auto;
 
-  background:rgba(255,255,255,.72);
+  margin:
+  0 auto;
 
-  border:1px solid rgba(0,105,88,.13);
+
+  background:
+  rgba(255,255,255,.72);
+
+
+  border:
+  1px solid
+  rgba(0,105,88,.13);
+
 
   border-radius:32px;
 
+
   box-shadow:
-  0 25px 70px rgba(38,68,59,.10);
+  0 25px 70px
+  rgba(38,68,59,.10);
+
 
   overflow:hidden;
+
 }
 
+
 .map-topbar {
+
   display:flex;
 
-  justify-content:space-between;
+
+  justify-content:
+  space-between;
+
 
   align-items:center;
+
 
   gap:20px;
 
-  padding:20px 25px;
+
+  padding:
+  20px 25px;
+
 
   border-bottom:
-  1px solid rgba(0,105,88,.10);
+  1px solid
+  rgba(0,105,88,.10);
+
 }
 
+
 .map-key {
+
   display:flex;
 
+
   align-items:center;
+
 
   flex-wrap:wrap;
 
+
   gap:20px;
+
 
   color:#61716c;
 
+
   font-size:13px;
+
 }
 
+
 .key-item {
+
   display:flex;
+
 
   align-items:center;
 
+
   gap:8px;
+
 }
 
+
 .key-dot {
+
   width:10px;
+
   height:10px;
+
 
   border-radius:50%;
 
-  background:var(--green);
+
+  background:
+  var(--green);
+
 }
+
 
 .key-dot.hub {
-  background:var(--gold);
+
+  background:
+  var(--gold);
+
 
   box-shadow:
-  0 0 0 5px rgba(201,149,69,.15);
+  0 0 0 5px
+  rgba(201,149,69,.15);
+
 }
 
+
 .map-counter {
+
   color:#17443c;
+
 
   font-weight:700;
 
+
   font-size:14px;
+
 }
 
 
+
 /* =========================================================
-   MAP CONTAINER
+   MAP STAGE
 ========================================================= */
 
 .map-stage {
+
   position:relative;
+
 
   width:100%;
 
-  aspect-ratio:2048 / 1039;
+
+  aspect-ratio:
+  2048 / 1039;
+
 
   overflow:hidden;
+
 
   background:
   linear-gradient(
@@ -543,89 +924,133 @@ nav {
   #f9fcfb,
   #f1f7f4
   );
-}
 
-
-/* REAL SVG MAP */
-
-.real-world-map {
-  position:absolute;
-
-  inset:0;
-
-  width:100%;
-  height:100%;
-
-  object-fit:contain;
-
-  display:block;
-
-  opacity:.72;
-
-  filter:
-  sepia(.12)
-  saturate(.65)
-  hue-rotate(100deg)
-  brightness(1.03);
 }
 
 
 /* =========================================================
-   ROUTE SVG LAYER
+   REAL ROBINSON MAP
 ========================================================= */
 
-.route-overlay {
+.real-world-map {
+
   position:absolute;
+
 
   inset:0;
 
+
   width:100%;
+
   height:100%;
+
+
+  object-fit:contain;
+
+
+  display:block;
+
+
+  opacity:.74;
+
+
+  filter:
+  sepia(.10)
+  saturate(.60)
+  hue-rotate(100deg)
+  brightness(1.04);
+
+}
+
+
+
+/* =========================================================
+   ROUTE OVERLAY
+========================================================= */
+
+.route-overlay {
+
+  position:absolute;
+
+
+  inset:0;
+
+
+  width:100%;
+
+  height:100%;
+
 
   z-index:4;
 
+
   pointer-events:none;
+
 }
 
+
 .travel-route {
+
   fill:none;
 
-  stroke:var(--gold);
+
+  stroke:
+  var(--gold);
+
 
   stroke-width:2.4;
 
+
   stroke-linecap:round;
 
-  stroke-dasharray:7 8;
 
-  opacity:.65;
+  stroke-dasharray:
+  7 8;
 
-  vector-effect:non-scaling-stroke;
+
+  opacity:.68;
+
+
+  vector-effect:
+  non-scaling-stroke;
+
 
   animation:
   routeFlow 4s linear infinite;
 
+
   transition:.3s;
+
 }
 
+
 .travel-route.active {
+
   opacity:1;
+
 
   stroke-width:3.5;
 
+
   filter:
   drop-shadow(
-  0 0 4px rgba(201,149,69,.55)
+  0 0 4px
+  rgba(201,149,69,.55)
   );
+
 }
+
 
 @keyframes routeFlow {
 
   to {
+
     stroke-dashoffset:-60;
+
   }
 
 }
+
 
 
 /* =========================================================
@@ -633,74 +1058,133 @@ nav {
 ========================================================= */
 
 .qatar-marker {
+
   position:absolute;
 
-  transform:translate(-50%,-50%);
+
+  transform:
+  translate(-50%,-50%);
+
 
   z-index:10;
 
+
   pointer-events:none;
+
 }
 
+
 .qatar-dot {
+
   width:32px;
+
   height:32px;
+
 
   border-radius:50%;
 
-  background:var(--gold);
 
-  border:5px solid white;
+  background:
+  var(--gold);
+
+
+  border:
+  5px solid white;
+
 
   box-shadow:
-  0 0 0 7px rgba(201,149,69,.18),
-  0 6px 20px rgba(100,65,20,.25);
 
-  animation:qatarPulse 2.2s ease-in-out infinite;
+  0 0 0 7px
+  rgba(201,149,69,.18),
+
+  0 6px 20px
+  rgba(100,65,20,.25);
+
+
+  animation:
+  qatarPulse
+  2.2s
+  ease-in-out
+  infinite;
+
 }
+
 
 @keyframes qatarPulse {
 
+
   0%,100% {
+
     box-shadow:
-    0 0 0 7px rgba(201,149,69,.18),
-    0 6px 20px rgba(100,65,20,.25);
+
+    0 0 0 7px
+    rgba(201,149,69,.18),
+
+    0 6px 20px
+    rgba(100,65,20,.25);
+
   }
 
+
   50% {
+
     box-shadow:
-    0 0 0 14px rgba(201,149,69,.05),
-    0 6px 20px rgba(100,65,20,.25);
+
+    0 0 0 14px
+    rgba(201,149,69,.05),
+
+    0 6px 20px
+    rgba(100,65,20,.25);
+
   }
+
 
 }
 
+
 .qatar-label {
+
   position:absolute;
+
 
   top:43px;
 
+
   left:50%;
 
-  transform:translateX(-50%);
+
+  transform:
+  translateX(-50%);
+
 
   white-space:nowrap;
 
+
   background:#173e37;
+
 
   color:white;
 
-  padding:7px 12px;
+
+  padding:
+  7px 12px;
+
 
   border-radius:20px;
 
+
   font-size:11px;
+
 
   font-weight:700;
 
+
   box-shadow:
-  0 7px 20px rgba(23,62,55,.20);
+  0 7px 20px
+  rgba(23,62,55,.20);
+
 }
+
 
 
 /* =========================================================
@@ -708,101 +1192,171 @@ nav {
 ========================================================= */
 
 .destination-marker {
+
   position:absolute;
 
-  transform:translate(-50%,-50%);
+
+  transform:
+  translate(-50%,-50%);
+
 
   z-index:12;
 
+
   border:0;
+
 
   background:none;
 
+
   padding:7px;
 
+
   cursor:pointer;
+
 }
 
+
 .marker-ring {
+
   width:26px;
+
   height:26px;
+
 
   display:flex;
 
+
   align-items:center;
+
   justify-content:center;
 
+
   border-radius:50%;
+
 
   background:white;
 
-  border:2px solid var(--green);
+
+  border:
+  2px solid
+  var(--green);
+
 
   box-shadow:
-  0 4px 15px rgba(0,85,72,.25);
+  0 4px 15px
+  rgba(0,85,72,.25);
+
 
   transition:.25s;
+
 }
 
+
 .marker-core {
+
   width:9px;
+
   height:9px;
+
 
   border-radius:50%;
 
-  background:var(--green);
+
+  background:
+  var(--green);
+
 }
 
-.destination-marker:hover .marker-ring,
-.destination-marker.active .marker-ring {
 
-  transform:scale(1.3);
+.destination-marker:hover
+.marker-ring,
 
-  background:var(--green);
+.destination-marker.active
+.marker-ring {
+
+  transform:
+  scale(1.3);
+
+
+  background:
+  var(--green);
+
 
   box-shadow:
-  0 0 0 8px rgba(0,121,102,.13),
-  0 8px 22px rgba(0,85,72,.28);
+
+  0 0 0 8px
+  rgba(0,121,102,.13),
+
+  0 8px 22px
+  rgba(0,85,72,.28);
+
 }
 
-.destination-marker:hover .marker-core,
-.destination-marker.active .marker-core {
+
+.destination-marker:hover
+.marker-core,
+
+.destination-marker.active
+.marker-core {
+
   background:white;
+
 }
+
 
 
 /* =========================================================
-   COUNTRY LABEL
+   COUNTRY LABELS
 ========================================================= */
 
 .marker-name {
+
   position:absolute;
+
 
   top:34px;
 
+
   left:50%;
 
-  transform:translateX(-50%);
 
-  padding:4px 7px;
+  transform:
+  translateX(-50%);
+
+
+  padding:
+  4px 7px;
+
 
   border-radius:8px;
 
-  background:rgba(255,253,248,.92);
+
+  background:
+  rgba(255,253,248,.94);
+
 
   color:#16483f;
 
+
   font-size:10px;
+
 
   font-weight:700;
 
+
   white-space:nowrap;
 
+
   box-shadow:
-  0 4px 12px rgba(40,70,60,.10);
+  0 4px 12px
+  rgba(40,70,60,.10);
+
 
   pointer-events:none;
+
 }
+
 
 
 /* =========================================================
@@ -810,132 +1364,213 @@ nav {
 ========================================================= */
 
 .map-tooltip {
+
   position:absolute;
+
 
   z-index:30;
 
+
   width:210px;
+
 
   padding:16px;
 
-  background:rgba(19,54,48,.97);
+
+  background:
+  rgba(19,54,48,.97);
+
 
   color:white;
 
+
   border-radius:17px;
 
+
   box-shadow:
-  0 15px 40px rgba(20,50,45,.25);
+  0 15px 40px
+  rgba(20,50,45,.25);
+
 
   pointer-events:none;
 
+
   opacity:0;
+
 
   transform:
   translate(-50%,-115%)
   translateY(-10px);
 
+
   transition:.22s;
+
 }
 
+
 .map-tooltip.show {
+
   opacity:1;
+
 
   transform:
   translate(-50%,-115%)
   translateY(0);
+
 }
 
+
 .tooltip-country {
+
   display:flex;
+
 
   align-items:center;
 
+
   gap:9px;
 
-  font-family:"Playfair Display",serif;
+
+  font-family:
+  "Playfair Display",
+  serif;
+
 
   font-size:20px;
+
 }
+
 
 .tooltip-flag {
+
   font-size:22px;
+
 }
 
+
 .tooltip-text {
+
   display:block;
+
 
   margin-top:6px;
 
-  color:rgba(255,255,255,.74);
+
+  color:
+  rgba(255,255,255,.74);
+
 
   font-size:12px;
 
+
   line-height:1.5;
+
 }
 
+
 .tooltip-action {
+
   display:block;
+
 
   margin-top:9px;
 
+
   color:#efd09b;
+
 
   font-size:12px;
 
+
   font-weight:700;
+
 }
 
 
+
 /* =========================================================
-   JOURNEY STATS
+   STATS
 ========================================================= */
 
 .journey-stats {
+
   max-width:850px;
 
-  margin:35px auto 0;
+
+  margin:
+  35px auto 0;
+
 
   display:grid;
+
 
   grid-template-columns:
   repeat(3,1fr);
 
+
   gap:18px;
+
 }
+
 
 .stat {
+
   text-align:center;
 
-  padding:22px 15px;
 
-  background:rgba(255,255,255,.68);
+  padding:
+  22px 15px;
+
+
+  background:
+  rgba(255,255,255,.68);
+
 
   border:
-  1px solid rgba(0,105,88,.10);
+  1px solid
+  rgba(0,105,88,.10);
+
 
   border-radius:20px;
+
 }
 
+
 .stat strong {
+
   display:block;
 
-  font-family:"Playfair Display",serif;
+
+  font-family:
+  "Playfair Display",
+  serif;
+
 
   font-size:32px;
 
-  color:var(--green);
+
+  color:
+  var(--green);
+
 }
 
+
 .stat span {
+
   display:block;
+
 
   margin-top:4px;
 
-  color:var(--muted);
+
+  color:
+  var(--muted);
+
 
   font-size:13px;
+
 }
+
 
 
 /* =========================================================
@@ -943,123 +1578,205 @@ nav {
 ========================================================= */
 
 .social-section {
-  background:var(--cream);
+
+  background:
+  var(--cream);
+
 }
 
+
 .cards {
+
   max-width:1150px;
+
 
   margin:auto;
 
+
   display:grid;
+
 
   grid-template-columns:
   repeat(3,1fr);
 
+
   gap:25px;
+
 }
 
+
 .card {
+
   min-height:390px;
+
 
   border-radius:26px;
 
+
   padding:35px;
+
 
   display:flex;
 
+
   flex-direction:column;
 
-  justify-content:space-between;
+
+  justify-content:
+  space-between;
+
 
   color:#183a34;
 
-  background:rgba(255,255,255,.72);
+
+  background:
+  rgba(255,255,255,.72);
+
 
   border:
-  1px solid rgba(0,105,88,.12);
+  1px solid
+  rgba(0,105,88,.12);
+
 
   box-shadow:
-  0 15px 45px rgba(30,65,55,.08);
+  0 15px 45px
+  rgba(30,65,55,.08);
+
 
   transition:.4s;
+
 }
 
+
 .card:hover {
-  transform:translateY(-10px);
+
+  transform:
+  translateY(-10px);
+
 
   border-color:
   rgba(0,121,102,.35);
 
+
   box-shadow:
-  0 22px 50px rgba(30,65,55,.14);
+  0 22px 50px
+  rgba(30,65,55,.14);
+
 }
 
+
 .card-icon {
+
   width:70px;
+
   height:70px;
+
 
   border-radius:20px;
 
+
   display:flex;
 
+
   justify-content:center;
+
   align-items:center;
+
 
   font-size:31px;
 
-  color:var(--green);
+
+  color:
+  var(--green);
+
 
   background:#edf6f2;
 
+
   transition:.3s;
+
 }
 
-.card:hover .card-icon {
+
+.card:hover
+.card-icon {
+
   transform:
   rotate(-4deg)
   scale(1.06);
+
 }
 
+
 .card h3 {
-  font-family:"Playfair Display",serif;
+
+  font-family:
+  "Playfair Display",
+  serif;
+
 
   font-size:31px;
 
+
   color:#163f37;
 
+
   margin-top:35px;
+
 }
 
+
 .card p {
+
   color:#5c6c67;
+
 
   line-height:1.65;
 
+
   margin-top:12px;
+
 }
 
+
 .visit {
+
   margin-top:35px;
+
 
   display:inline-flex;
 
+
   align-items:center;
+
 
   gap:10px;
 
-  color:var(--green);
+
+  color:
+  var(--green);
+
 
   font-weight:700;
+
 }
+
 
 .visit i {
+
   transition:.3s;
+
 }
 
-.card:hover .visit i {
-  transform:translateX(7px);
+
+.card:hover
+.visit i {
+
+  transform:
+  translateX(7px);
+
 }
+
 
 
 /* =========================================================
@@ -1067,11 +1784,16 @@ nav {
 ========================================================= */
 
 .travel-banner {
-  padding:110px 20px;
+
+  padding:
+  110px 20px;
+
 
   text-align:center;
 
+
   background:
+
   radial-gradient(
   circle at 20% 20%,
   rgba(255,255,255,.10),
@@ -1083,25 +1805,41 @@ nav {
   #005f50,
   #00806a
   );
+
 }
 
+
 .travel-banner h2 {
+
   max-width:850px;
+
 
   margin:auto;
 
-  font-family:"Playfair Display",serif;
 
-  font-size:clamp(35px,5vw,65px);
+  font-family:
+  "Playfair Display",
+  serif;
+
+
+  font-size:
+  clamp(35px,5vw,65px);
+
 
   line-height:1.15;
 
+
   color:white;
+
 }
 
+
 .travel-banner span {
+
   color:#f2ce91;
+
 }
+
 
 
 /* =========================================================
@@ -1109,67 +1847,112 @@ nav {
 ========================================================= */
 
 footer {
+
   text-align:center;
 
-  padding:55px 20px 45px;
+
+  padding:
+  55px 20px 45px;
+
 
   background:#fffaf1;
 
+
   border-top:
-  1px solid rgba(0,105,88,.10);
+  1px solid
+  rgba(0,105,88,.10);
+
 }
 
+
 .footer-logo {
-  width:min(280px,70%);
+
+  width:
+  min(280px,70%);
+
 
   height:auto;
 
-  margin:0 auto 28px;
+
+  margin:
+  0 auto 28px;
+
 
   display:block;
+
 }
 
+
 .footer-socials {
+
   display:flex;
 
+
   justify-content:center;
+
 
   gap:18px;
 
+
   margin-bottom:23px;
+
 }
 
+
 .footer-socials a {
+
   width:46px;
+
   height:46px;
+
 
   border-radius:50%;
 
+
   display:flex;
 
+
   justify-content:center;
+
   align-items:center;
 
-  color:var(--green);
+
+  color:
+  var(--green);
+
 
   background:#edf6f2;
 
+
   transition:.3s;
+
 }
 
+
 .footer-socials a:hover {
-  background:var(--green);
+
+  background:
+  var(--green);
+
 
   color:white;
 
-  transform:translateY(-4px);
+
+  transform:
+  translateY(-4px);
+
 }
+
 
 footer p {
+
   color:#61716c;
 
+
   font-size:14px;
+
 }
+
 
 
 /* =========================================================
@@ -1178,147 +1961,272 @@ footer p {
 
 @media(max-width:800px) {
 
+
   nav {
-    padding:9px 5%;
+
+    padding:
+    9px 5%;
+
   }
+
 
   .logo img {
+
     width:145px;
+
   }
+
 
   .nav-links {
+
     display:none;
+
   }
+
 
   .hero {
+
     padding:
     115px 18px 75px;
+
   }
+
 
   .hero-logo {
-    width:min(370px,92%);
+
+    width:
+    min(370px,92%);
+
   }
+
 
   .mini-title {
+
     font-size:11px;
+
+
     letter-spacing:3px;
+
   }
+
 
   .travel-title {
+
     font-size:
-    clamp(44px,15vw,70px);
+    clamp(
+    44px,
+    15vw,
+    70px
+    );
+
   }
+
 
   .hero-description {
+
     font-size:16px;
+
   }
+
 
   .section {
-    padding:75px 15px;
+
+    padding:
+    75px 15px;
+
   }
+
 
   .map-shell {
+
     border-radius:20px;
+
   }
 
+
   .map-topbar {
+
     flex-direction:column;
+
 
     align-items:flex-start;
 
+
     padding:15px;
+
   }
 
-  .map-stage {
-    overflow-x:auto;
-
-    min-height:360px;
-
-    aspect-ratio:auto;
-  }
 
   /*
-     On mobile we deliberately make the map
-     wider than the screen so tiny countries
-     remain usable.
+     Keep the Robinson map's aspect ratio
+     on mobile.
+
+     No distorted geography.
   */
 
-  .real-world-map,
-  .route-overlay {
-    width:720px;
-    height:365px;
-    max-width:none;
-  }
-
   .map-stage {
-    width:100%;
-    height:365px;
+
+    aspect-ratio:
+    2048 / 1039;
+
+
+    min-height:0;
+
+
+    overflow:hidden;
+
   }
 
-  .marker-name {
-    font-size:8px;
-  }
 
   .marker-ring {
-    width:22px;
-    height:22px;
+
+    width:20px;
+
+    height:20px;
+
   }
+
 
   .marker-core {
-    width:7px;
-    height:7px;
+
+    width:6px;
+
+    height:6px;
+
   }
+
+
+  .destination-marker {
+
+    padding:5px;
+
+  }
+
+
+  .marker-name {
+
+    top:27px;
+
+
+    font-size:7px;
+
+
+    padding:
+    3px 4px;
+
+  }
+
 
   .qatar-dot {
-    width:27px;
-    height:27px;
+
+    width:24px;
+
+    height:24px;
+
+
+    border-width:4px;
+
   }
+
 
   .qatar-label {
-    font-size:9px;
+
+    top:32px;
+
+
+    font-size:7px;
+
+
+    padding:
+    4px 6px;
+
   }
+
+
+  .map-tooltip {
+
+    width:165px;
+
+
+    padding:12px;
+
+  }
+
+
+  .tooltip-country {
+
+    font-size:16px;
+
+  }
+
 
   .journey-stats {
+
     grid-template-columns:1fr;
+
 
     gap:10px;
+
   }
+
 
   .cards {
+
     grid-template-columns:1fr;
+
   }
+
 
   .card {
+
     min-height:330px;
+
   }
 
+
 }
+
 
 
 /* =========================================================
    REDUCED MOTION
 ========================================================= */
 
-@media(prefers-reduced-motion:reduce) {
+@media(
+prefers-reduced-motion:reduce
+) {
+
 
   html {
+
     scroll-behavior:auto;
+
   }
 
+
   *,
+
   *::before,
+
   *::after {
+
     animation:none !important;
+
     transition:none !important;
+
   }
+
 
 }
 
+
 </style>
+
 </head>
 
 
 <body>
+
 
 
 <!-- =========================================================
@@ -1327,39 +2235,57 @@ footer p {
 
 <nav>
 
-  <a href="#home" class="logo">
 
-    <img
-    src="images/ybk-logo.png"
-    alt="YBK - Yasser Bilal Kiani">
-
-  </a>
+<a
+href="#home"
+class="logo">
 
 
-  <div class="nav-links">
+<img
+src="images/ybk-logo.png"
+alt="YBK - Yasser Bilal Kiani">
 
-    <a href="#home">
-      Home
-    </a>
 
-    <a href="#journey">
-      Journey
-    </a>
+</a>
 
-    <a href="#socials">
-      Follow
-    </a>
 
-    <a
-    href="https://www.youtube.com/@yasserbilalkiani"
-    target="_blank"
-    rel="noopener noreferrer">
 
-      Videos
+<div class="nav-links">
 
-    </a>
 
-  </div>
+<a href="#home">
+
+Home
+
+</a>
+
+
+<a href="#journey">
+
+Journey
+
+</a>
+
+
+<a href="#socials">
+
+Follow
+
+</a>
+
+
+<a
+href="https://www.youtube.com/@yasserbilalkiani"
+target="_blank"
+rel="noopener noreferrer">
+
+Videos
+
+</a>
+
+
+</div>
+
 
 </nav>
 
@@ -1374,92 +2300,104 @@ class="hero"
 id="home">
 
 
-  <div class="hero-content">
+<div class="hero-content">
 
 
-    <img
-    src="images/ybk-logo.png"
-    class="hero-logo"
-    alt="YBK - Yasser Bilal Kiani">
+<img
+src="images/ybk-logo.png"
+class="hero-logo"
+alt="YBK - Yasser Bilal Kiani">
 
 
-    <div class="mini-title">
+<div class="mini-title">
 
-      Explore • Experience • Remember
+Explore • Experience • Remember
 
-    </div>
-
-
-    <h1 class="travel-title">
-
-      <span>
-        Travel Diaries
-      </span>
-
-    </h1>
+</div>
 
 
-    <p class="hero-description">
+<h1 class="travel-title">
 
-      Exploring places, cultures and unforgettable experiences.
-      Follow the journey through photographs, travel stories,
-      videos and memorable moments from around the world.
+<span>
 
-    </p>
+Travel Diaries
 
+</span>
 
-    <div class="social-buttons">
-
-
-      <a
-      class="social-btn"
-      href="https://www.instagram.com/ybktraveldiaries/"
-      target="_blank"
-      rel="noopener noreferrer">
-
-        <i class="fa-brands fa-instagram"></i>
-
-        Instagram
-
-      </a>
+</h1>
 
 
-      <a
-      class="social-btn"
-      href="https://www.youtube.com/@yasserbilalkiani"
-      target="_blank"
-      rel="noopener noreferrer">
+<p class="hero-description">
 
-        <i class="fa-brands fa-youtube"></i>
+Exploring places, cultures and unforgettable experiences.
+Follow the journey through photographs, travel stories,
+videos and memorable moments from around the world.
 
-        YouTube
-
-      </a>
+</p>
 
 
-      <a
-      class="social-btn"
-      href="https://www.threads.com/@ybktraveldiaries"
-      target="_blank"
-      rel="noopener noreferrer">
 
-        <i class="fa-brands fa-threads"></i>
-
-        Threads
-
-      </a>
+<div class="social-buttons">
 
 
-    </div>
+<a
+class="social-btn"
+href="https://www.instagram.com/ybktraveldiaries/"
+target="_blank"
+rel="noopener noreferrer">
 
-  </div>
+
+<i class="fa-brands fa-instagram"></i>
+
+Instagram
 
 
-  <div class="scroll">
+</a>
 
-    SCROLL ↓
 
-  </div>
+
+<a
+class="social-btn"
+href="https://www.youtube.com/@yasserbilalkiani"
+target="_blank"
+rel="noopener noreferrer">
+
+
+<i class="fa-brands fa-youtube"></i>
+
+YouTube
+
+
+</a>
+
+
+
+<a
+class="social-btn"
+href="https://www.threads.com/@ybktraveldiaries"
+target="_blank"
+rel="noopener noreferrer">
+
+
+<i class="fa-brands fa-threads"></i>
+
+Threads
+
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+<div class="scroll">
+
+SCROLL ↓
+
+</div>
 
 
 </section>
@@ -1467,7 +2405,7 @@ id="home">
 
 
 <!-- =========================================================
-     REAL INTERACTIVE WORLD MAP
+     INTERACTIVE WORLD MAP
 ========================================================= -->
 
 <section
@@ -1475,239 +2413,267 @@ class="section journey-section"
 id="journey">
 
 
-  <div class="section-heading">
+<div class="section-heading">
 
 
-    <small>
+<small>
 
-      Our Journey So Far
+Our Journey So Far
 
-    </small>
+</small>
 
 
-    <h2>
+<h2>
 
-      From Qatar to the World
+From Qatar to the World
 
-    </h2>
+</h2>
 
 
-    <p>
+<p>
 
-      Every destination adds another story to the journey.
-      Hover over a destination — or tap a destination on
-      mobile — to explore the places visited by
-      YBK Travel Diaries.
+Every destination adds another story to the journey.
+Hover over a destination — or tap it on mobile —
+to explore the places visited by YBK Travel Diaries.
 
-    </p>
+</p>
 
 
-  </div>
+</div>
 
 
 
-  <div class="map-shell">
+<div class="map-shell">
 
 
-    <div class="map-topbar">
+<div class="map-topbar">
 
 
-      <div class="map-key">
+<div class="map-key">
 
 
-        <div class="key-item">
+<div class="key-item">
 
-          <span class="key-dot hub"></span>
+<span class="key-dot hub"></span>
 
-          Qatar Hub
+Qatar Hub
 
-        </div>
+</div>
 
 
-        <div class="key-item">
+<div class="key-item">
 
-          <span class="key-dot"></span>
+<span class="key-dot"></span>
 
-          Visited Destination
+Visited Destination
 
-        </div>
+</div>
 
 
-      </div>
+</div>
 
 
-      <div
-      class="map-counter"
-      id="mapCounter">
+<div
+class="map-counter"
+id="mapCounter">
 
-        6 Countries Visited
+6 Countries Visited
 
-      </div>
+</div>
 
 
-    </div>
+</div>
 
 
 
-    <div
-    class="map-stage"
-    id="mapStage">
+<div
+class="map-stage"
+id="mapStage">
 
 
-      <!-- =================================================
-           REAL ROBINSON WORLD MAP SVG
+<!-- =====================================================
+     REAL ROBINSON WORLD MAP
 
-           FILE:
-           images/world-map.svg
-      ================================================== -->
+     Keep this file in:
 
-      <img
-      src="images/world-map.svg"
-      class="real-world-map"
-      id="realWorldMap"
-      alt="World map showing YBK Travel Diaries destinations"
-      draggable="false">
+     images/world-map.svg
+===================================================== -->
 
+<img
 
-      <!-- =================================================
-           FLIGHT ROUTES
-      ================================================== -->
+src="images/world-map.svg"
 
-      <svg
-      class="route-overlay"
-      id="routeOverlay"
-      viewBox="0 0 2048 1039"
-      preserveAspectRatio="xMidYMid meet">
+class="real-world-map"
 
-        <g id="routeLayer"></g>
+alt="World map showing destinations visited by YBK Travel Diaries"
 
-      </svg>
+draggable="false"
 
+>
 
-      <!-- DESTINATION DOTS -->
 
-      <div id="markerLayer"></div>
 
+<!-- ROUTE OVERLAY -->
 
-      <!-- QATAR HUB -->
+<svg
 
-      <div
-      class="qatar-marker"
-      id="qatarMarker">
+class="route-overlay"
 
+viewBox="0 0 2048 1039"
 
-        <div class="qatar-dot"></div>
+preserveAspectRatio="xMidYMid meet"
 
+aria-hidden="true"
 
-        <div class="qatar-label">
+>
 
-          🇶🇦 Qatar • Our Hub
 
-        </div>
+<g id="routeLayer"></g>
 
 
-      </div>
+</svg>
 
 
-      <!-- HOVER TOOLTIP -->
 
-      <div
-      class="map-tooltip"
-      id="mapTooltip">
+<!-- DESTINATION MARKERS -->
 
+<div id="markerLayer"></div>
 
-        <div class="tooltip-country">
 
 
-          <span
-          class="tooltip-flag"
-          id="tooltipFlag">
-          </span>
+<!-- QATAR -->
 
+<div
+class="qatar-marker"
+id="qatarMarker">
 
-          <span
-          id="tooltipCountry">
-          </span>
 
+<div class="qatar-dot"></div>
 
-        </div>
 
+<div class="qatar-label">
 
-        <span
-        class="tooltip-text"
-        id="tooltipText">
+🇶🇦 Qatar • Our Hub
 
-          Explored by YBK Travel Diaries
+</div>
 
-        </span>
 
+</div>
 
-        <span
-        class="tooltip-action"
-        id="tooltipAction">
 
-          YBK Journey ✓
 
-        </span>
+<!-- TOOLTIP -->
 
+<div
+class="map-tooltip"
+id="mapTooltip">
 
-      </div>
 
+<div class="tooltip-country">
 
-    </div>
 
+<span
+class="tooltip-flag"
+id="tooltipFlag">
+</span>
 
-  </div>
 
+<span
+id="tooltipCountry">
+</span>
 
 
-  <!-- =====================================================
-       TRAVEL STATS
-  ====================================================== -->
+</div>
 
-  <div class="journey-stats">
 
+<span
+class="tooltip-text"
+id="tooltipText">
+</span>
 
-    <div class="stat">
 
-      <strong id="countryCount">
-        6
-      </strong>
+<span
+class="tooltip-action"
+id="tooltipAction">
+</span>
 
-      <span>
-        Countries Visited
-      </span>
 
-    </div>
+</div>
 
 
-    <div class="stat">
+</div>
 
-      <strong>
-        Qatar
-      </strong>
 
-      <span>
-        Our Travel Hub
-      </span>
+</div>
 
-    </div>
 
 
-    <div class="stat">
+<div class="journey-stats">
 
-      <strong>
-        ∞
-      </strong>
 
-      <span>
-        More Stories Ahead
-      </span>
+<div class="stat">
 
-    </div>
 
+<strong id="countryCount">
 
-  </div>
+6
+
+</strong>
+
+
+<span>
+
+Countries Visited
+
+</span>
+
+
+</div>
+
+
+
+<div class="stat">
+
+
+<strong>
+
+Qatar
+
+</strong>
+
+
+<span>
+
+Our Travel Hub
+
+</span>
+
+
+</div>
+
+
+
+<div class="stat">
+
+
+<strong>
+
+∞
+
+</strong>
+
+
+<span>
+
+More Stories Ahead
+
+</span>
+
+
+</div>
+
+
+</div>
 
 
 </section>
@@ -1715,7 +2681,7 @@ id="journey">
 
 
 <!-- =========================================================
-     SOCIAL MEDIA
+     SOCIAL SECTION
 ========================================================= -->
 
 <section
@@ -1723,187 +2689,212 @@ class="section social-section"
 id="socials">
 
 
-  <div class="section-heading">
+<div class="section-heading">
 
 
-    <small>
+<small>
 
-      Follow the Journey
+Follow the Journey
 
-    </small>
+</small>
 
 
-    <h2>
+<h2>
 
-      Travel With YBK
+Travel With YBK
 
-    </h2>
+</h2>
 
 
-    <p>
+<p>
 
-      Follow YBK Travel Diaries across our social platforms
-      for photography, videos, stories and new destinations.
+Follow YBK Travel Diaries across our social platforms
+for travel photography, videos, stories and new destinations.
 
-    </p>
+</p>
 
 
-  </div>
+</div>
 
 
 
-  <div class="cards">
+<div class="cards">
 
 
-    <!-- INSTAGRAM -->
 
-    <a
-    class="card instagram"
-    href="https://www.instagram.com/ybktraveldiaries/"
-    target="_blank"
-    rel="noopener noreferrer">
+<!-- INSTAGRAM -->
 
+<a
 
-      <div>
+class="card"
 
+href="https://www.instagram.com/ybktraveldiaries/"
 
-        <div class="card-icon">
+target="_blank"
 
-          <i class="fa-brands fa-instagram"></i>
+rel="noopener noreferrer"
 
-        </div>
+>
 
 
-        <h3>
-          Instagram
-        </h3>
+<div>
 
 
-        <p>
+<div class="card-icon">
 
-          Discover travel photography,
-          beautiful destinations,
-          reels and memorable moments
-          from our journeys.
+<i class="fa-brands fa-instagram"></i>
 
-        </p>
+</div>
 
 
-      </div>
+<h3>
 
+Instagram
 
-      <div class="visit">
+</h3>
 
-        Explore Instagram
 
-        <i class="fa-solid fa-arrow-right"></i>
+<p>
 
-      </div>
+Discover travel photography,
+beautiful destinations,
+reels and memorable moments
+from our journeys.
 
+</p>
 
-    </a>
 
+</div>
 
 
-    <!-- YOUTUBE -->
+<div class="visit">
 
-    <a
-    class="card youtube"
-    href="https://www.youtube.com/@yasserbilalkiani"
-    target="_blank"
-    rel="noopener noreferrer">
+Explore Instagram
 
+<i class="fa-solid fa-arrow-right"></i>
 
-      <div>
+</div>
 
 
-        <div class="card-icon">
+</a>
 
-          <i class="fa-brands fa-youtube"></i>
 
-        </div>
 
+<!-- YOUTUBE -->
 
-        <h3>
-          YouTube
-        </h3>
+<a
 
+class="card"
 
-        <p>
+href="https://www.youtube.com/@yasserbilalkiani"
 
-          Watch travel videos,
-          destination experiences
-          and adventures from
-          YBK Travel Diaries.
+target="_blank"
 
-        </p>
+rel="noopener noreferrer"
 
+>
 
-      </div>
 
+<div>
 
-      <div class="visit">
 
-        Watch on YouTube
+<div class="card-icon">
 
-        <i class="fa-solid fa-play"></i>
+<i class="fa-brands fa-youtube"></i>
 
-      </div>
+</div>
 
 
-    </a>
+<h3>
 
+YouTube
 
+</h3>
 
-    <!-- THREADS -->
 
-    <a
-    class="card threads"
-    href="https://www.threads.com/@ybktraveldiaries"
-    target="_blank"
-    rel="noopener noreferrer">
+<p>
 
+Watch travel videos,
+destination experiences
+and adventures from
+YBK Travel Diaries.
 
-      <div>
+</p>
 
 
-        <div class="card-icon">
+</div>
 
-          <i class="fa-brands fa-threads"></i>
 
-        </div>
+<div class="visit">
 
+Watch on YouTube
 
-        <h3>
-          Threads
-        </h3>
+<i class="fa-solid fa-play"></i>
 
+</div>
 
-        <p>
 
-          Follow quick travel updates,
-          thoughts, recommendations
-          and stories along the way.
+</a>
 
-        </p>
 
 
-      </div>
+<!-- THREADS -->
 
+<a
 
-      <div class="visit">
+class="card"
 
-        Join the Conversation
+href="https://www.threads.com/@ybktraveldiaries"
 
-        <i class="fa-solid fa-arrow-right"></i>
+target="_blank"
 
-      </div>
+rel="noopener noreferrer"
 
+>
 
-    </a>
 
+<div>
 
-  </div>
+
+<div class="card-icon">
+
+<i class="fa-brands fa-threads"></i>
+
+</div>
+
+
+<h3>
+
+Threads
+
+</h3>
+
+
+<p>
+
+Follow quick travel updates,
+thoughts, recommendations
+and stories along the way.
+
+</p>
+
+
+</div>
+
+
+<div class="visit">
+
+Join the Conversation
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</div>
+
+
+</a>
+
+
+</div>
 
 
 </section>
@@ -1917,15 +2908,18 @@ id="socials">
 <section class="travel-banner">
 
 
-  <h2>
+<h2>
 
-    The world is full of stories.
+The world is full of stories.
 
-    <span>
-      Let's discover them.
-    </span>
+<span>
 
-  </h2>
+Let's discover them.
+
+</span>
+
+
+</h2>
 
 
 </section>
@@ -1939,58 +2933,85 @@ id="socials">
 <footer>
 
 
-  <img
-  src="images/ybk-logo.png"
-  class="footer-logo"
-  alt="YBK - Yasser Bilal Kiani">
+<img
+
+src="images/ybk-logo.png"
+
+class="footer-logo"
+
+alt="YBK - Yasser Bilal Kiani"
+
+>
 
 
-  <div class="footer-socials">
+
+<div class="footer-socials">
 
 
-    <a
-    href="https://www.instagram.com/ybktraveldiaries/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram">
+<a
 
-      <i class="fa-brands fa-instagram"></i>
+href="https://www.instagram.com/ybktraveldiaries/"
 
-    </a>
+target="_blank"
 
+rel="noopener noreferrer"
 
-    <a
-    href="https://www.youtube.com/@yasserbilalkiani"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="YouTube">
+aria-label="Instagram"
 
-      <i class="fa-brands fa-youtube"></i>
+>
 
-    </a>
+<i class="fa-brands fa-instagram"></i>
+
+</a>
 
 
-    <a
-    href="https://www.threads.com/@ybktraveldiaries"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Threads">
 
-      <i class="fa-brands fa-threads"></i>
+<a
 
-    </a>
+href="https://www.youtube.com/@yasserbilalkiani"
+
+target="_blank"
+
+rel="noopener noreferrer"
+
+aria-label="YouTube"
+
+>
+
+<i class="fa-brands fa-youtube"></i>
+
+</a>
 
 
-  </div>
+
+<a
+
+href="https://www.threads.com/@ybktraveldiaries"
+
+target="_blank"
+
+rel="noopener noreferrer"
+
+aria-label="Threads"
+
+>
+
+<i class="fa-brands fa-threads"></i>
+
+</a>
 
 
-  <p>
+</div>
 
-    © <span id="year"></span>
-    YBK Travel Diaries.
-    All rights reserved.
 
-  </p>
+
+<p>
+
+© <span id="year"></span>
+YBK Travel Diaries.
+All rights reserved.
+
+</p>
 
 
 </footer>
@@ -1999,8 +3020,9 @@ id="socials">
 
 <script>
 
+
 /* =========================================================
-   YEAR
+   CURRENT YEAR
 ========================================================= */
 
 document.getElementById("year").textContent =
@@ -2009,9 +3031,7 @@ new Date().getFullYear();
 
 
 /* =========================================================
-   MAP DIMENSIONS
-
-   These correspond to the real SVG dimensions.
+   ROBINSON MAP SIZE
 ========================================================= */
 
 const MAP_WIDTH = 2048;
@@ -2021,132 +3041,374 @@ const MAP_HEIGHT = 1039;
 
 
 /* =========================================================
-   QATAR HUB
+   ROBINSON PROJECTION
 
-   x and y are percentages of the Robinson map.
+   IMPORTANT:
 
-   DO NOT normally change this.
+   We now store REAL latitude and longitude.
+
+   The function below converts them automatically
+   into the correct Robinson-map position.
+
+   This means future destinations are much easier
+   to add accurately.
+========================================================= */
+
+
+/*
+   Robinson projection lookup table.
+
+   Latitude every 5 degrees.
+
+   X = horizontal compression
+   Y = vertical position
+*/
+
+const ROBINSON_X = [
+
+1.0000,
+0.9986,
+0.9954,
+0.9900,
+0.9822,
+0.9730,
+0.9600,
+0.9427,
+0.9216,
+0.8962,
+0.8679,
+0.8350,
+0.7986,
+0.7597,
+0.7186,
+0.6732,
+0.6213,
+0.5722,
+0.5322
+
+];
+
+
+const ROBINSON_Y = [
+
+0.0000,
+0.0620,
+0.1240,
+0.1860,
+0.2480,
+0.3100,
+0.3720,
+0.4340,
+0.4958,
+0.5571,
+0.6176,
+0.6769,
+0.7346,
+0.7903,
+0.8435,
+0.8936,
+0.9394,
+0.9761,
+1.0000
+
+];
+
+
+
+/* =========================================================
+   ROBINSON PROJECTION FUNCTION
+========================================================= */
+
+function robinsonProject(
+latitude,
+longitude
+) {
+
+
+const sign =
+latitude < 0 ? -1 : 1;
+
+
+const absLat =
+Math.abs(latitude);
+
+
+/*
+   Determine position between
+   two 5-degree entries.
+*/
+
+const index =
+Math.min(
+Math.floor(absLat / 5),
+17
+);
+
+
+const fraction =
+(
+absLat -
+index * 5
+) / 5;
+
+
+
+const xFactor =
+
+ROBINSON_X[index] +
+
+(
+ROBINSON_X[index + 1] -
+ROBINSON_X[index]
+) * fraction;
+
+
+
+const yFactor =
+
+ROBINSON_Y[index] +
+
+(
+ROBINSON_Y[index + 1] -
+ROBINSON_Y[index]
+) * fraction;
+
+
+
+/*
+   Robinson map constants.
+
+   Convert projection into
+   percentage coordinates.
+*/
+
+const projectedX =
+
+0.8487 *
+
+longitude *
+
+Math.PI / 180 *
+
+xFactor;
+
+
+
+const projectedY =
+
+1.3523 *
+
+yFactor *
+
+sign;
+
+
+
+/*
+   Robinson world extent.
+*/
+
+const maxX =
+0.8487 * Math.PI;
+
+
+const maxY =
+1.3523;
+
+
+
+const xPercent =
+
+50 +
+
+(
+projectedX /
+(2 * maxX)
+) * 100;
+
+
+
+const yPercent =
+
+50 -
+
+(
+projectedY /
+(2 * maxY)
+) * 100;
+
+
+
+return {
+
+x:xPercent,
+
+y:yPercent
+
+};
+
+
+}
+
+
+
+/* =========================================================
+   QATAR
+
+   Doha coordinates are used as our hub.
 ========================================================= */
 
 const QATAR = {
 
-  x: 61.7,
+country:"Qatar",
 
-  y: 51.8
+flag:"🇶🇦",
+
+lat:25.2854,
+
+lon:51.5310
 
 };
 
 
 
 /* =========================================================
-   ⭐ FUTURE COUNTRIES — EDIT THIS LIST ONLY ⭐
+   ⭐⭐⭐ FUTURE DESTINATIONS ⭐⭐⭐
 
-   This is the important part.
+   THIS IS THE ONLY LIST YOU NEED TO EDIT LATER.
 
-   In future, if another country is visited,
-   add ONE new object here.
+   We now use REAL:
+
+   lat = latitude
+   lon = longitude
 
    Example:
 
    {
      country:"Turkey",
      flag:"🇹🇷",
-     x:56.5,
-     y:42,
+     lat:39.0,
+     lon:35.0,
      text:"Explored by YBK Travel Diaries",
      link:""
    }
-
-   The page automatically creates:
-
-   ✓ dot
-   ✓ label
-   ✓ Qatar flight route
-   ✓ hover
-   ✓ mobile tap
-   ✓ country counter
 
 ========================================================= */
 
 const DESTINATIONS = [
 
 
-  {
-    country:"Pakistan",
-    flag:"🇵🇰",
+{
 
-    x:67.2,
-    y:47.0,
+country:"Pakistan",
 
-    text:"Explored by YBK Travel Diaries",
+flag:"🇵🇰",
 
-    link:""
-  },
+lat:30.3753,
 
+lon:69.3451,
 
-  {
-    country:"Norway",
-    flag:"🇳🇴",
+text:
+"Explored by YBK Travel Diaries",
 
-    x:51.2,
-    y:25.0,
+link:""
 
-    text:"Explored by YBK Travel Diaries",
-
-    link:""
-  },
+},
 
 
-  {
-    country:"Georgia",
-    flag:"🇬🇪",
 
-    x:57.7,
-    y:41.0,
+{
 
-    text:"Explored by YBK Travel Diaries",
+country:"Norway",
 
-    link:""
-  },
+flag:"🇳🇴",
 
+lat:60.4720,
 
-  {
-    country:"Saudi Arabia",
-    flag:"🇸🇦",
+lon:8.4689,
 
-    x:60.2,
-    y:53.7,
+text:
+"Explored by YBK Travel Diaries",
 
-    text:"Explored by YBK Travel Diaries",
+link:""
 
-    link:""
-  },
+},
 
 
-  {
-    country:"Azerbaijan",
-    flag:"🇦🇿",
 
-    x:59.3,
-    y:41.0,
+{
 
-    text:"Explored by YBK Travel Diaries",
+country:"Georgia",
 
-    link:""
-  },
+flag:"🇬🇪",
+
+lat:42.3154,
+
+lon:43.3569,
+
+text:
+"Explored by YBK Travel Diaries",
+
+link:""
+
+},
 
 
-  {
-    country:"Maldives",
-    flag:"🇲🇻",
 
-    x:66.3,
-    y:62.5,
+{
 
-    text:"Explored by YBK Travel Diaries",
+country:"Saudi Arabia",
 
-    link:""
-  }
+flag:"🇸🇦",
+
+lat:23.8859,
+
+lon:45.0792,
+
+text:
+"Explored by YBK Travel Diaries",
+
+link:""
+
+},
+
+
+
+{
+
+country:"Azerbaijan",
+
+flag:"🇦🇿",
+
+lat:40.1431,
+
+lon:47.5769,
+
+text:
+"Explored by YBK Travel Diaries",
+
+link:""
+
+},
+
+
+
+{
+
+country:"Maldives",
+
+flag:"🇲🇻",
+
+lat:3.2028,
+
+lon:73.2207,
+
+text:
+"Explored by YBK Travel Diaries",
+
+link:""
+
+}
 
 
 ];
@@ -2154,35 +3416,73 @@ const DESTINATIONS = [
 
 
 /* =========================================================
-   ELEMENTS
+   CONVERT QATAR TO MAP POSITION
+========================================================= */
+
+const qatarPosition =
+robinsonProject(
+QATAR.lat,
+QATAR.lon
+);
+
+
+
+/* =========================================================
+   MAP ELEMENTS
 ========================================================= */
 
 const mapStage =
-document.getElementById("mapStage");
+document.getElementById(
+"mapStage"
+);
+
 
 const routeLayer =
-document.getElementById("routeLayer");
+document.getElementById(
+"routeLayer"
+);
+
 
 const markerLayer =
-document.getElementById("markerLayer");
+document.getElementById(
+"markerLayer"
+);
+
 
 const qatarMarker =
-document.getElementById("qatarMarker");
+document.getElementById(
+"qatarMarker"
+);
+
 
 const tooltip =
-document.getElementById("mapTooltip");
+document.getElementById(
+"mapTooltip"
+);
+
 
 const tooltipFlag =
-document.getElementById("tooltipFlag");
+document.getElementById(
+"tooltipFlag"
+);
+
 
 const tooltipCountry =
-document.getElementById("tooltipCountry");
+document.getElementById(
+"tooltipCountry"
+);
+
 
 const tooltipText =
-document.getElementById("tooltipText");
+document.getElementById(
+"tooltipText"
+);
+
 
 const tooltipAction =
-document.getElementById("tooltipAction");
+document.getElementById(
+"tooltipAction"
+);
 
 
 
@@ -2191,21 +3491,23 @@ document.getElementById("tooltipAction");
 ========================================================= */
 
 qatarMarker.style.left =
-QATAR.x + "%";
+qatarPosition.x + "%";
+
 
 qatarMarker.style.top =
-QATAR.y + "%";
+qatarPosition.y + "%";
 
 
 
 /* =========================================================
-   AUTOMATIC COUNTRY COUNT
+   COUNTRY COUNT
 ========================================================= */
 
 document.getElementById(
 "countryCount"
 ).textContent =
 DESTINATIONS.length;
+
 
 
 document.getElementById(
@@ -2216,8 +3518,11 @@ DESTINATIONS.length +
 
 (
 DESTINATIONS.length === 1
+
 ? " Country Visited"
+
 : " Countries Visited"
+
 );
 
 
@@ -2226,366 +3531,554 @@ DESTINATIONS.length === 1
    CREATE ROUTE
 ========================================================= */
 
-function createRoute(destination,index) {
+function createRoute(
+destination,
+index
+) {
 
 
-  const startX =
-  (QATAR.x / 100) *
-  MAP_WIDTH;
+const destinationPosition =
+robinsonProject(
+destination.lat,
+destination.lon
+);
 
 
-  const startY =
-  (QATAR.y / 100) *
-  MAP_HEIGHT;
+
+const startX =
+
+(qatarPosition.x / 100) *
+
+MAP_WIDTH;
 
 
-  const endX =
-  (destination.x / 100) *
-  MAP_WIDTH;
+
+const startY =
+
+(qatarPosition.y / 100) *
+
+MAP_HEIGHT;
 
 
-  const endY =
-  (destination.y / 100) *
-  MAP_HEIGHT;
+
+const endX =
+
+(destinationPosition.x / 100) *
+
+MAP_WIDTH;
 
 
-  const middleX =
-  (startX + endX) / 2;
+
+const endY =
+
+(destinationPosition.y / 100) *
+
+MAP_HEIGHT;
 
 
-  const distance =
-  Math.abs(endX - startX);
+
+const middleX =
+
+(startX + endX) / 2;
 
 
-  /*
-     Higher arch for distant destinations.
-  */
 
-  const curveHeight =
-  Math.max(
-  45,
-  Math.min(
-  170,
-  distance * .20
-  )
-  );
+const distance =
 
+Math.sqrt(
 
-  const middleY =
-  Math.min(startY,endY)
-  - curveHeight;
+Math.pow(
+endX - startX,
+2
+)
 
++
 
-  const path =
-  document.createElementNS(
-  "http://www.w3.org/2000/svg",
-  "path"
-  );
+Math.pow(
+endY - startY,
+2
+)
+
+);
 
 
-  path.setAttribute(
-  "d",
 
-  `M ${startX} ${startY}
-   Q ${middleX} ${middleY}
-   ${endX} ${endY}`
-  );
+/*
+   Curved flight path.
+*/
+
+const curveHeight =
+
+Math.max(
+
+25,
+
+Math.min(
+
+150,
+
+distance * .20
+
+)
+
+);
 
 
-  path.setAttribute(
-  "class",
-  "travel-route"
-  );
+
+const middleY =
+
+Math.min(
+startY,
+endY
+)
+
+-
+
+curveHeight;
 
 
-  path.dataset.route =
-  index;
+
+const path =
+
+document.createElementNS(
+
+"http://www.w3.org/2000/svg",
+
+"path"
+
+);
 
 
-  routeLayer.appendChild(
-  path
-  );
+
+path.setAttribute(
+
+"d",
+
+`M ${startX} ${startY}
+ Q ${middleX} ${middleY}
+ ${endX} ${endY}`
+
+);
+
+
+
+path.setAttribute(
+
+"class",
+
+"travel-route"
+
+);
+
+
+
+path.dataset.route =
+index;
+
+
+
+routeLayer.appendChild(
+path
+);
+
 
 }
 
 
 
 /* =========================================================
-   SHOW DESTINATION
+   SHOW TOOLTIP
 ========================================================= */
 
 function showTooltip(
 destination,
 marker,
-index
+index,
+position
 ) {
 
 
-  document
-  .querySelectorAll(
-  ".destination-marker"
-  )
-  .forEach(item =>
-  item.classList.remove("active")
-  );
+document
+.querySelectorAll(
+".destination-marker"
+)
+.forEach(
+item =>
+item.classList.remove(
+"active"
+)
+);
 
 
-  document
-  .querySelectorAll(
-  ".travel-route"
-  )
-  .forEach(item =>
-  item.classList.remove("active")
-  );
+
+document
+.querySelectorAll(
+".travel-route"
+)
+.forEach(
+item =>
+item.classList.remove(
+"active"
+)
+);
 
 
-  marker.classList.add(
-  "active"
-  );
+
+marker.classList.add(
+"active"
+);
 
 
-  const route =
-  document.querySelector(
-  `[data-route="${index}"]`
-  );
+
+const route =
+
+document.querySelector(
+`[data-route="${index}"]`
+);
 
 
-  if(route) {
 
-    route.classList.add(
-    "active"
-    );
+if(route) {
 
-  }
+route.classList.add(
+"active"
+);
 
-
-  tooltipFlag.textContent =
-  destination.flag;
+}
 
 
-  tooltipCountry.textContent =
-  destination.country;
+
+tooltipFlag.textContent =
+destination.flag;
 
 
-  tooltipText.textContent =
-  destination.text;
+
+tooltipCountry.textContent =
+destination.country;
 
 
-  tooltipAction.textContent =
-  destination.link
-  ? "View the Journey →"
-  : "YBK Journey ✓";
+
+tooltipText.textContent =
+destination.text;
 
 
-  tooltip.style.left =
-  destination.x + "%";
+
+tooltipAction.textContent =
+
+destination.link
+
+? "View the Journey →"
+
+: "YBK Journey ✓";
 
 
-  tooltip.style.top =
-  destination.y + "%";
+
+tooltip.style.left =
+position.x + "%";
 
 
-  tooltip.classList.add(
-  "show"
-  );
+
+tooltip.style.top =
+position.y + "%";
+
+
+
+tooltip.classList.add(
+"show"
+);
+
 
 }
 
 
 
 /* =========================================================
-   HIDE DESTINATION
+   HIDE TOOLTIP
 ========================================================= */
 
 function hideTooltip() {
 
 
-  tooltip.classList.remove(
-  "show"
-  );
+tooltip.classList.remove(
+"show"
+);
 
 
-  document
-  .querySelectorAll(
-  ".destination-marker"
-  )
-  .forEach(item =>
-  item.classList.remove("active")
-  );
+
+document
+.querySelectorAll(
+".destination-marker"
+)
+.forEach(
+item =>
+item.classList.remove(
+"active"
+)
+);
 
 
-  document
-  .querySelectorAll(
-  ".travel-route"
-  )
-  .forEach(item =>
-  item.classList.remove("active")
-  );
+
+document
+.querySelectorAll(
+".travel-route"
+)
+.forEach(
+item =>
+item.classList.remove(
+"active"
+)
+);
+
 
 }
 
 
 
 /* =========================================================
-   CREATE COUNTRIES
+   CREATE DESTINATIONS
 ========================================================= */
 
 DESTINATIONS.forEach(
 (destination,index) => {
 
 
-  /* CREATE FLIGHT PATH */
+/*
+   Calculate the actual Robinson
+   projection position.
+*/
 
-  createRoute(
-  destination,
-  index
-  );
+const position =
 
+robinsonProject(
 
-  /* CREATE MARKER */
+destination.lat,
 
-  const marker =
-  document.createElement(
-  "button"
-  );
+destination.lon
 
-
-  marker.className =
-  "destination-marker";
+);
 
 
-  marker.style.left =
-  destination.x + "%";
+
+/*
+   Create Qatar →
+   destination flight route.
+*/
+
+createRoute(
+destination,
+index
+);
 
 
-  marker.style.top =
-  destination.y + "%";
+
+/*
+   Create destination marker.
+*/
+
+const marker =
+
+document.createElement(
+"button"
+);
 
 
-  marker.setAttribute(
-  "aria-label",
-  destination.country
-  );
+
+marker.className =
+"destination-marker";
 
 
-  marker.innerHTML = `
 
-  <span class="marker-ring">
-
-    <span class="marker-core">
-    </span>
-
-  </span>
-
-  <span class="marker-name">
-
-    ${destination.flag}
-    ${destination.country}
-
-  </span>
-
-  `;
+marker.style.left =
+position.x + "%";
 
 
-  /* DESKTOP HOVER */
 
-  marker.addEventListener(
-  "mouseenter",
-  () => {
-
-    showTooltip(
-    destination,
-    marker,
-    index
-    );
-
-  });
+marker.style.top =
+position.y + "%";
 
 
-  marker.addEventListener(
-  "mouseleave",
-  () => {
 
-    hideTooltip();
+marker.setAttribute(
 
-  });
+"aria-label",
 
+destination.country
 
-  /* KEYBOARD */
-
-  marker.addEventListener(
-  "focus",
-  () => {
-
-    showTooltip(
-    destination,
-    marker,
-    index
-    );
-
-  });
+);
 
 
-  marker.addEventListener(
-  "blur",
-  () => {
 
-    hideTooltip();
-
-  });
+marker.innerHTML = `
 
 
-  /* MOBILE TAP */
+<span class="marker-ring">
 
-  marker.addEventListener(
-  "click",
-  event => {
+<span class="marker-core">
+</span>
 
-
-    event.stopPropagation();
+</span>
 
 
-    showTooltip(
-    destination,
-    marker,
-    index
-    );
+<span class="marker-name">
+
+${destination.flag}
+${destination.country}
+
+</span>
 
 
-    /*
-       If you add a destination link later,
-       clicking opens it.
-    */
-
-    if(destination.link) {
+`;
 
 
-      setTimeout(
-      () => {
+
+/* =====================================================
+   DESKTOP HOVER
+===================================================== */
+
+marker.addEventListener(
+"mouseenter",
+() => {
 
 
-        window.open(
-        destination.link,
-        "_blank",
-        "noopener,noreferrer"
-        );
+showTooltip(
+
+destination,
+
+marker,
+
+index,
+
+position
+
+);
 
 
-      },250);
+}
+);
 
 
-    }
+
+marker.addEventListener(
+"mouseleave",
+() => {
 
 
-  });
+hideTooltip();
 
 
-  markerLayer.appendChild(
-  marker
-  );
+}
+);
 
 
-});
+
+/* =====================================================
+   KEYBOARD
+===================================================== */
+
+marker.addEventListener(
+"focus",
+() => {
+
+
+showTooltip(
+
+destination,
+
+marker,
+
+index,
+
+position
+
+);
+
+
+}
+);
+
+
+
+marker.addEventListener(
+"blur",
+() => {
+
+
+hideTooltip();
+
+
+}
+);
+
+
+
+/* =====================================================
+   MOBILE TAP
+===================================================== */
+
+marker.addEventListener(
+"click",
+event => {
+
+
+event.stopPropagation();
+
+
+
+showTooltip(
+
+destination,
+
+marker,
+
+index,
+
+position
+
+);
+
+
+
+if(
+destination.link
+) {
+
+
+setTimeout(
+() => {
+
+
+window.open(
+
+destination.link,
+
+"_blank",
+
+"noopener,noreferrer"
+
+);
+
+
+},
+
+250
+);
+
+
+}
+
+
+}
+);
+
+
+
+markerLayer.appendChild(
+marker
+);
+
+
+}
+);
 
 
 
@@ -2598,20 +4091,23 @@ mapStage.addEventListener(
 event => {
 
 
-  if(
-  !event.target.closest(
-  ".destination-marker"
-  )
-  ) {
+if(
+
+!event.target.closest(
+".destination-marker"
+)
+
+) {
 
 
-    hideTooltip();
+hideTooltip();
 
 
-  }
+}
 
 
-});
+}
+);
 
 
 
@@ -2620,79 +4116,95 @@ event => {
 ========================================================= */
 
 const cards =
+
 document.querySelectorAll(
 ".card"
 );
 
 
+
 const reducedMotion =
+
 window.matchMedia(
+
 "(prefers-reduced-motion: reduce)"
+
 ).matches;
 
 
-if(!reducedMotion) {
+
+if(
+!reducedMotion
+) {
 
 
-  const observer =
-  new IntersectionObserver(
+const observer =
 
-  entries => {
+new IntersectionObserver(
 
-
-    entries.forEach(
-    entry => {
+entries => {
 
 
-      if(entry.isIntersecting) {
+entries.forEach(
+entry => {
 
 
-        entry.target.style.opacity =
-        "1";
+if(
+entry.isIntersecting
+) {
 
 
-        entry.target.style.transform =
-        "translateY(0)";
+entry.target.style.opacity =
+"1";
 
 
-        observer.unobserve(
-        entry.target
-        );
+entry.target.style.transform =
+"translateY(0)";
 
 
-      }
+observer.unobserve(
+entry.target
+);
 
 
-    });
+}
 
 
-  },
-
-  {
-    threshold:.15
-  }
-
-  );
+}
+);
 
 
-  cards.forEach(
-  card => {
+},
+
+{
+
+threshold:.15
+
+}
+
+);
 
 
-    card.style.opacity =
-    "0";
+
+cards.forEach(
+card => {
 
 
-    card.style.transform =
-    "translateY(35px)";
+card.style.opacity =
+"0";
 
 
-    observer.observe(
-    card
-    );
+card.style.transform =
+"translateY(35px)";
 
 
-  });
+observer.observe(
+card
+);
+
+
+}
+);
 
 
 }
@@ -2700,5 +4212,7 @@ if(!reducedMotion) {
 
 </script>
 
+
 </body>
+
 </html>
