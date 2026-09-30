@@ -1,0 +1,4120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>YBK Travel Diaries | Explore • Experience • Remember</title>
+
+<meta name="description"
+content="YBK Travel Diaries — exploring destinations, cultures, travel stories and unforgettable experiences around the world.">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+:root {
+
+  --green:#007966;
+  --green-dark:#123b34;
+  --gold:#c99545;
+
+  --cream:#f7f2e8;
+  --cream-light:#fffdf8;
+
+  --text:#172421;
+  --muted:#60716c;
+
+}
+
+* {
+
+  margin:0;
+  padding:0;
+
+  box-sizing:border-box;
+
+}
+
+html {
+
+  scroll-behavior:smooth;
+
+}
+
+body {
+
+  font-family:"DM Sans",sans-serif;
+
+  background:var(--cream);
+
+  color:var(--text);
+
+  overflow-x:hidden;
+
+}
+
+a {
+
+  text-decoration:none;
+  color:inherit;
+
+}
+
+button {
+
+  font:inherit;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav {
+  position:fixed;
+  width:calc(100% - 32px);
+  max-width:1280px;
+  top:16px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 12px 10px 20px;
+  background:rgba(255,253,248,.82);
+  backdrop-filter:blur(22px) saturate(145%);
+  -webkit-backdrop-filter:blur(22px) saturate(145%);
+  border:1px solid rgba(0,105,88,.13);
+  border-radius:22px;
+  box-shadow:0 14px 45px rgba(27,63,54,.10), inset 0 1px 0 rgba(255,255,255,.85);
+}
+
+nav::after {
+  content:"";
+  position:absolute;
+  left:22px;
+  right:22px;
+  bottom:-1px;
+  height:2px;
+  border-radius:999px;
+  background:linear-gradient(90deg,transparent,var(--green),var(--gold),transparent);
+  opacity:.42;
+}
+
+.logo {
+  display:flex;
+  align-items:center;
+  min-width:0;
+}
+
+.logo img {
+  width:178px;
+  height:auto;
+  display:block;
+  transition:transform .3s ease, filter .3s ease;
+  filter:drop-shadow(0 4px 8px rgba(18,59,52,.08));
+}
+
+.logo:hover img {
+  transform:translateY(-1px) scale(1.025);
+}
+
+.nav-links {
+  display:flex;
+  gap:4px;
+  align-items:center;
+  padding:4px;
+  border-radius:16px;
+  background:rgba(238,246,242,.70);
+  border:1px solid rgba(0,105,88,.07);
+}
+
+.nav-links a {
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:0 17px;
+  border-radius:12px;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.15px;
+  color:#284a43;
+  opacity:.88;
+  transition:color .25s ease, background .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+.nav-links a:hover {
+  color:var(--green);
+  opacity:1;
+  background:rgba(255,255,255,.88);
+  box-shadow:0 6px 18px rgba(31,72,61,.08);
+  transform:translateY(-1px);
+}
+
+.nav-links a:last-child {
+  gap:8px;
+  padding-left:18px;
+  padding-right:18px;
+  color:white;
+  background:linear-gradient(135deg,#006b59,#008d76);
+  box-shadow:0 8px 20px rgba(0,121,102,.18);
+}
+
+.nav-links a:last-child::before {
+  content:"\f144";
+  font-family:"Font Awesome 6 Free";
+  font-weight:900;
+  font-size:12px;
+}
+
+.nav-links a:last-child:hover {
+  color:white;
+  background:linear-gradient(135deg,#005e4f,#007966);
+  box-shadow:0 10px 24px rgba(0,121,102,.25);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+  min-height:100vh;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  padding:
+  135px 20px 80px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+
+  radial-gradient(
+  circle at 15% 30%,
+  rgba(0,125,105,.13),
+  transparent 32%
+  ),
+
+  radial-gradient(
+  circle at 85% 65%,
+  rgba(218,174,104,.22),
+  transparent 32%
+  ),
+
+  linear-gradient(
+  135deg,
+  #fffdf8,
+  #f3ead9 55%,
+  #faf6ed
+  );
+
+}
+
+
+.hero::before {
+
+  content:"";
+
+  position:absolute;
+
+  width:500px;
+  height:500px;
+
+  border-radius:50%;
+
+  background:
+  rgba(0,130,108,.07);
+
+  filter:blur(25px);
+
+  top:-200px;
+  right:-150px;
+
+  animation:
+  floatOne 9s ease-in-out infinite;
+
+}
+
+
+.hero::after {
+
+  content:"";
+
+  position:absolute;
+
+  width:430px;
+  height:430px;
+
+  border-radius:50%;
+
+  background:
+  rgba(213,164,82,.10);
+
+  filter:blur(30px);
+
+  bottom:-170px;
+  left:-130px;
+
+  animation:
+  floatTwo 11s ease-in-out infinite;
+
+}
+
+
+@keyframes floatOne {
+
+  0%,100% {
+    transform:translateY(0);
+  }
+
+  50% {
+    transform:translateY(35px);
+  }
+
+}
+
+
+@keyframes floatTwo {
+
+  0%,100% {
+    transform:translateY(0);
+  }
+
+  50% {
+    transform:translateY(-30px);
+  }
+
+}
+
+
+.hero-content {
+
+  max-width:920px;
+
+  position:relative;
+
+  z-index:5;
+
+}
+
+
+.hero-logo {
+
+  width:min(540px,85%);
+
+  height:auto;
+
+  display:block;
+
+  margin:0 auto 25px;
+
+  filter:
+  drop-shadow(
+  0 12px 20px rgba(20,50,45,.12)
+  );
+
+}
+
+
+.mini-title {
+
+  color:#9b6b26;
+
+  letter-spacing:5px;
+
+  text-transform:uppercase;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  margin-bottom:18px;
+
+}
+
+
+.travel-title {
+
+  font-family:
+  "Playfair Display",
+  serif;
+
+  font-size:
+  clamp(52px,8vw,100px);
+
+  line-height:1;
+
+  margin-bottom:28px;
+
+}
+
+
+.travel-title span {
+
+  display:block;
+
+  background:
+  linear-gradient(
+  90deg,
+  #006b59,
+  #00947b,
+  #c99545
+  );
+
+  -webkit-background-clip:text;
+
+  background-clip:text;
+
+  color:transparent;
+
+}
+
+
+.hero-description {
+
+  max-width:670px;
+
+  margin:auto;
+
+  font-size:18px;
+
+  line-height:1.75;
+
+  color:#445650;
+
+}
+
+
+/* =========================================================
+   SOCIAL BUTTONS
+========================================================= */
+
+.social-buttons {
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:15px;
+
+  margin-top:36px;
+
+}
+
+
+.social-btn {
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:10px;
+
+  min-width:145px;
+
+  padding:14px 22px;
+
+  border-radius:50px;
+
+  border:
+  1px solid rgba(0,105,88,.22);
+
+  background:
+  rgba(255,255,255,.68);
+
+  color:#006c5b;
+
+  font-weight:600;
+
+  box-shadow:
+  0 8px 25px rgba(35,65,55,.08);
+
+  transition:.3s;
+
+}
+
+
+.social-btn:hover {
+
+  transform:translateY(-5px);
+
+  background:var(--green);
+
+  color:white;
+
+  box-shadow:
+  0 12px 30px rgba(0,105,88,.22);
+
+}
+
+
+.social-btn i {
+
+  font-size:20px;
+
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.scroll {
+
+  position:absolute;
+
+  bottom:25px;
+
+  left:50%;
+
+  transform:
+  translateX(-50%);
+
+  color:#47645d;
+
+  font-size:11px;
+
+  font-weight:700;
+
+  letter-spacing:3px;
+
+  opacity:.65;
+
+  animation:
+  scrollBounce 2s infinite;
+
+}
+
+
+@keyframes scrollBounce {
+
+  0%,100% {
+
+    transform:
+    translateX(-50%)
+    translateY(0);
+
+  }
+
+  50% {
+
+    transform:
+    translateX(-50%)
+    translateY(7px);
+
+  }
+
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.section {
+
+  padding:100px 7%;
+
+}
+
+
+.section-heading {
+
+  text-align:center;
+
+  margin-bottom:50px;
+
+}
+
+
+.section-heading small {
+
+  color:#9b6b26;
+
+  letter-spacing:4px;
+
+  font-weight:700;
+
+  text-transform:uppercase;
+
+}
+
+
+.section-heading h2 {
+
+  font-family:
+  "Playfair Display",
+  serif;
+
+  font-size:
+  clamp(38px,5vw,60px);
+
+  color:#123b34;
+
+  margin-top:10px;
+
+}
+
+
+.section-heading p {
+
+  max-width:700px;
+
+  margin:
+  18px auto 0;
+
+  color:var(--muted);
+
+  line-height:1.7;
+
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.journey-section {
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+
+  radial-gradient(
+  circle at 10% 10%,
+  rgba(0,121,102,.08),
+  transparent 28%
+  ),
+
+  linear-gradient(
+  180deg,
+  #fffdf8,
+  #f4eee2
+  );
+
+}
+
+
+.map-shell {
+
+  max-width:1200px;
+
+  margin:0 auto;
+
+  background:
+  rgba(255,255,255,.72);
+
+  border:
+  1px solid rgba(0,105,88,.13);
+
+  border-radius:32px;
+
+  box-shadow:
+  0 25px 70px rgba(38,68,59,.10);
+
+  overflow:hidden;
+
+}
+
+
+.map-topbar {
+
+  display:flex;
+
+  justify-content:space-between;
+  align-items:center;
+
+  gap:20px;
+
+  padding:20px 25px;
+
+  border-bottom:
+  1px solid rgba(0,105,88,.10);
+
+}
+
+
+.map-key {
+
+  display:flex;
+
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  gap:20px;
+
+  color:#61716c;
+
+  font-size:13px;
+
+}
+
+
+.key-item {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+}
+
+
+.key-dot {
+
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:var(--green);
+
+}
+
+
+.key-dot.hub {
+
+  background:var(--gold);
+
+  box-shadow:
+  0 0 0 5px rgba(201,149,69,.15);
+
+}
+
+
+.map-counter {
+
+  color:#17443c;
+
+  font-weight:700;
+
+  font-size:14px;
+
+}
+
+
+/* =========================================================
+   INTERACTIVE MAP ZOOM CONTROLS
+========================================================= */
+
+.map-stage {
+  cursor:grab;
+  touch-action:none;
+  user-select:none;
+}
+
+.map-stage.dragging {
+  cursor:grabbing;
+}
+
+.zoom-layer {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  transform-origin:0 0;
+  will-change:transform;
+}
+
+.zoom-controls {
+  position:absolute;
+  top:16px;
+  right:16px;
+  z-index:250;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.zoom-btn {
+  width:44px;
+  height:44px;
+  border:1px solid rgba(0,105,88,.16);
+  border-radius:13px;
+  background:rgba(255,253,248,.95);
+  color:var(--green-dark);
+  box-shadow:0 8px 24px rgba(25,65,55,.14);
+  cursor:pointer;
+  font-weight:700;
+  font-size:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:transform .2s, background .2s, color .2s;
+}
+
+.zoom-btn:hover {
+  transform:translateY(-2px);
+  background:var(--green);
+  color:white;
+}
+
+.zoom-level {
+  min-width:44px;
+  padding:7px 6px;
+  border-radius:11px;
+  background:rgba(19,54,48,.92);
+  color:white;
+  text-align:center;
+  font-size:11px;
+  font-weight:700;
+  box-shadow:0 7px 18px rgba(20,50,45,.18);
+}
+
+/* =========================================================
+   MAP STAGE
+========================================================= */
+
+.map-stage {
+
+  position:relative;
+
+  width:100%;
+
+  aspect-ratio:
+  2048 / 1039;
+
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+  180deg,
+  #f9fcfb,
+  #f1f7f4
+  );
+
+}
+
+
+.real-world-map {
+
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:contain;
+
+  display:block;
+
+  opacity:.72;
+
+  filter:
+  sepia(.10)
+  saturate(.60)
+  hue-rotate(100deg)
+  brightness(1.04);
+
+  pointer-events:none;
+
+}
+
+
+/* =========================================================
+   ROUTES
+========================================================= */
+
+.route-overlay {
+
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  z-index:4;
+
+  pointer-events:none;
+
+}
+
+
+.travel-route {
+
+  fill:none;
+
+  stroke:var(--gold);
+
+  stroke-width:2;
+
+  stroke-linecap:round;
+
+  stroke-dasharray:7 9;
+
+  opacity:.48;
+
+  vector-effect:
+  non-scaling-stroke;
+
+  animation:
+  routeFlow 4s linear infinite;
+
+  transition:
+  opacity .25s,
+  stroke-width .25s;
+
+}
+
+
+.travel-route.active {
+
+  opacity:1;
+
+  stroke-width:3.5;
+
+  filter:
+  drop-shadow(
+  0 0 4px rgba(201,149,69,.55)
+  );
+
+}
+
+
+@keyframes routeFlow {
+
+  to {
+
+    stroke-dashoffset:-64;
+
+  }
+
+}
+
+
+/* =========================================================
+   QATAR HUB
+========================================================= */
+
+.qatar-marker {
+
+  position:absolute;
+
+  transform:
+  translate(-50%,-50%);
+
+  z-index:15;
+
+  pointer-events:none;
+
+}
+
+
+.qatar-dot {
+
+  width:31px;
+  height:31px;
+
+  border-radius:50%;
+
+  background:var(--gold);
+
+  border:5px solid white;
+
+  box-shadow:
+
+  0 0 0 7px
+  rgba(201,149,69,.17),
+
+  0 6px 20px
+  rgba(100,65,20,.24);
+
+  animation:
+  qatarPulse 2.2s
+  ease-in-out infinite;
+
+}
+
+
+@keyframes qatarPulse {
+
+  0%,100% {
+
+    box-shadow:
+
+    0 0 0 7px
+    rgba(201,149,69,.17),
+
+    0 6px 20px
+    rgba(100,65,20,.24);
+
+  }
+
+  50% {
+
+    box-shadow:
+
+    0 0 0 13px
+    rgba(201,149,69,.04),
+
+    0 6px 20px
+    rgba(100,65,20,.24);
+
+  }
+
+}
+
+
+.qatar-label {
+
+  position:absolute;
+
+  top:43px;
+
+  left:50%;
+
+  transform:
+  translateX(-50%);
+
+  white-space:nowrap;
+
+  background:#173e37;
+
+  color:white;
+
+  padding:7px 12px;
+
+  border-radius:20px;
+
+  font-size:11px;
+
+  font-weight:700;
+
+  box-shadow:
+  0 7px 20px rgba(23,62,55,.20);
+
+}
+
+
+/* =========================================================
+   DESTINATION DOTS
+
+   IMPORTANT:
+   Country names are NOT permanently shown anymore.
+========================================================= */
+
+.destination-marker {
+
+  position:absolute;
+
+  transform:
+  translate(-50%,-50%);
+
+  z-index:20;
+
+  width:42px;
+  height:42px;
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+  border:0;
+
+  background:transparent;
+
+  cursor:pointer;
+
+}
+
+
+.marker-ring {
+
+  width:27px;
+  height:27px;
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+  border-radius:50%;
+
+  background:white;
+
+  border:
+  2px solid var(--green);
+
+  box-shadow:
+  0 4px 14px rgba(0,85,72,.24);
+
+  transition:
+  transform .25s,
+  background .25s,
+  box-shadow .25s;
+
+}
+
+
+.marker-core {
+
+  width:8px;
+  height:8px;
+
+  border-radius:50%;
+
+  background:var(--green);
+
+  transition:.25s;
+
+}
+
+
+.destination-marker:hover
+.marker-ring,
+
+.destination-marker.active
+.marker-ring {
+
+  transform:
+  scale(1.35);
+
+  background:var(--green);
+
+  box-shadow:
+
+  0 0 0 8px
+  rgba(0,121,102,.13),
+
+  0 8px 22px
+  rgba(0,85,72,.28);
+
+}
+
+
+.destination-marker:hover
+.marker-core,
+
+.destination-marker.active
+.marker-core {
+
+  background:white;
+
+}
+
+
+/* =========================================================
+   HOVER TOOLTIP
+========================================================= */
+
+.map-tooltip {
+
+  position:absolute;
+
+  z-index:100;
+
+  width:210px;
+
+  padding:16px 17px;
+
+  background:
+  rgba(19,54,48,.97);
+
+  color:white;
+
+  border:
+  1px solid rgba(255,255,255,.13);
+
+  border-radius:17px;
+
+  box-shadow:
+  0 15px 40px rgba(20,50,45,.28);
+
+  pointer-events:none;
+
+  opacity:0;
+
+  transition:
+  opacity .18s,
+  transform .18s;
+
+}
+
+
+/* Default = above */
+
+.map-tooltip.above {
+
+  transform:
+  translate(-50%,-115%);
+
+}
+
+
+.map-tooltip.above.show {
+
+  transform:
+  translate(-50%,-125%);
+
+}
+
+
+/* Below */
+
+.map-tooltip.below {
+
+  transform:
+  translate(-50%,25px);
+
+}
+
+
+.map-tooltip.below.show {
+
+  transform:
+  translate(-50%,34px);
+
+}
+
+
+/* Left */
+
+.map-tooltip.left {
+
+  transform:
+  translate(-110%,-50%);
+
+}
+
+
+.map-tooltip.left.show {
+
+  transform:
+  translate(-120%,-50%);
+
+}
+
+
+/* Right */
+
+.map-tooltip.right {
+
+  transform:
+  translate(20px,-50%);
+
+}
+
+
+.map-tooltip.right.show {
+
+  transform:
+  translate(30px,-50%);
+
+}
+
+
+.map-tooltip.show {
+
+  opacity:1;
+
+}
+
+
+.tooltip-country {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:9px;
+
+  font-family:
+  "Playfair Display",
+  serif;
+
+  font-size:21px;
+
+  line-height:1.2;
+
+}
+
+
+.tooltip-flag {
+
+  font-size:24px;
+
+}
+
+
+.tooltip-text {
+
+  display:block;
+
+  margin-top:7px;
+
+  color:
+  rgba(255,255,255,.74);
+
+  font-size:12px;
+
+  line-height:1.5;
+
+}
+
+
+.tooltip-action {
+
+  display:block;
+
+  margin-top:10px;
+
+  color:#efd09b;
+
+  font-size:12px;
+
+  font-weight:700;
+
+}
+
+
+/* =========================================================
+   MAP HINT
+========================================================= */
+
+.map-hint {
+
+  text-align:center;
+
+  padding:
+  15px 20px 20px;
+
+  color:#70817c;
+
+  font-size:12px;
+
+  letter-spacing:.3px;
+
+}
+
+
+.map-hint i {
+
+  margin-right:6px;
+
+  color:var(--green);
+
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.journey-stats {
+
+  max-width:850px;
+
+  margin:
+  35px auto 0;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:18px;
+
+}
+
+
+.stat {
+
+  text-align:center;
+
+  padding:22px 15px;
+
+  background:
+  rgba(255,255,255,.68);
+
+  border:
+  1px solid rgba(0,105,88,.10);
+
+  border-radius:20px;
+
+}
+
+
+.stat strong {
+
+  display:block;
+
+  font-family:
+  "Playfair Display",
+  serif;
+
+  font-size:32px;
+
+  color:var(--green);
+
+}
+
+
+.stat span {
+
+  display:block;
+
+  margin-top:4px;
+
+  color:var(--muted);
+
+  font-size:13px;
+
+}
+
+
+/* =========================================================
+   SOCIAL CARDS
+========================================================= */
+
+.social-section {
+
+  background:var(--cream);
+
+}
+
+
+.cards {
+
+  max-width:1150px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:25px;
+
+}
+
+
+.card {
+
+  min-height:390px;
+
+  border-radius:26px;
+
+  padding:35px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:space-between;
+
+  color:#183a34;
+
+  background:
+  rgba(255,255,255,.72);
+
+  border:
+  1px solid rgba(0,105,88,.12);
+
+  box-shadow:
+  0 15px 45px rgba(30,65,55,.08);
+
+  transition:.4s;
+
+}
+
+
+.card:hover {
+
+  transform:
+  translateY(-10px);
+
+  border-color:
+  rgba(0,121,102,.35);
+
+  box-shadow:
+  0 22px 50px rgba(30,65,55,.14);
+
+}
+
+
+.card-icon {
+
+  width:70px;
+  height:70px;
+
+  border-radius:20px;
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+  font-size:31px;
+
+  color:var(--green);
+
+  background:#edf6f2;
+
+  transition:.3s;
+
+}
+
+
+.card:hover .card-icon {
+
+  transform:
+  rotate(-4deg)
+  scale(1.06);
+
+}
+
+
+.card h3 {
+
+  font-family:
+  "Playfair Display",
+  serif;
+
+  font-size:31px;
+
+  color:#163f37;
+
+  margin-top:35px;
+
+}
+
+
+.card p {
+
+  color:#5c6c67;
+
+  line-height:1.65;
+
+  margin-top:12px;
+
+}
+
+
+.visit {
+
+  margin-top:35px;
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  color:var(--green);
+
+  font-weight:700;
+
+}
+
+
+.visit i {
+
+  transition:.3s;
+
+}
+
+
+.card:hover .visit i {
+
+  transform:
+  translateX(7px);
+
+}
+
+
+/* =========================================================
+   BANNER
+========================================================= */
+
+.travel-banner {
+
+  padding:110px 20px;
+
+  text-align:center;
+
+  background:
+
+  radial-gradient(
+  circle at 20% 20%,
+  rgba(255,255,255,.10),
+  transparent 25%
+  ),
+
+  linear-gradient(
+  135deg,
+  #005f50,
+  #00806a
+  );
+
+}
+
+
+.travel-banner h2 {
+
+  max-width:850px;
+
+  margin:auto;
+
+  font-family:
+  "Playfair Display",
+  serif;
+
+  font-size:
+  clamp(35px,5vw,65px);
+
+  line-height:1.15;
+
+  color:white;
+
+}
+
+
+.travel-banner span {
+
+  color:#f2ce91;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+  text-align:center;
+
+  padding:
+  55px 20px 45px;
+
+  background:#fffaf1;
+
+  border-top:
+  1px solid rgba(0,105,88,.10);
+
+}
+
+
+.footer-logo {
+
+  width:min(280px,70%);
+
+  height:auto;
+
+  margin:
+  0 auto 28px;
+
+  display:block;
+
+}
+
+
+.footer-socials {
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:18px;
+
+  margin-bottom:23px;
+
+}
+
+
+.footer-socials a {
+
+  width:46px;
+  height:46px;
+
+  border-radius:50%;
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+  color:var(--green);
+
+  background:#edf6f2;
+
+  transition:.3s;
+
+}
+
+
+.footer-socials a:hover {
+
+  background:var(--green);
+
+  color:white;
+
+  transform:
+  translateY(-4px);
+
+}
+
+
+footer p {
+
+  color:#61716c;
+
+  font-size:14px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:800px) {
+
+  nav {
+    width:calc(100% - 20px);
+    top:10px;
+    padding:8px 14px;
+    border-radius:18px;
+  }
+
+  nav::after {
+    left:16px;
+    right:16px;
+  }
+
+  .logo img {
+    width:145px;
+  }
+
+
+  .nav-links {
+
+    display:none;
+
+  }
+
+
+  .hero {
+
+    padding:
+    115px 18px 75px;
+
+  }
+
+
+  .hero-logo {
+
+    width:
+    min(370px,92%);
+
+  }
+
+
+  .mini-title {
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+  }
+
+
+  .travel-title {
+
+    font-size:
+    clamp(
+    44px,
+    15vw,
+    70px
+    );
+
+  }
+
+
+  .hero-description {
+
+    font-size:16px;
+
+  }
+
+
+  .section {
+
+    padding:
+    75px 15px;
+
+  }
+
+
+  .map-shell {
+
+    border-radius:20px;
+
+  }
+
+
+  .map-topbar {
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    padding:15px;
+
+  }
+
+
+  .map-stage {
+
+    aspect-ratio:
+    2048 / 1039;
+
+  }
+
+
+  .destination-marker {
+
+    width:34px;
+    height:34px;
+
+  }
+
+
+  .marker-ring {
+
+    width:20px;
+    height:20px;
+
+  }
+
+
+  .marker-core {
+
+    width:6px;
+    height:6px;
+
+  }
+
+
+  .qatar-dot {
+
+    width:24px;
+    height:24px;
+
+    border-width:4px;
+
+  }
+
+
+  .qatar-label {
+
+    top:31px;
+
+    font-size:7px;
+
+    padding:4px 6px;
+
+  }
+
+
+  .zoom-controls {
+    top:10px;
+    right:10px;
+    gap:6px;
+  }
+
+  .zoom-btn {
+    width:38px;
+    height:38px;
+    border-radius:11px;
+    font-size:16px;
+  }
+
+  .zoom-level {
+    min-width:38px;
+    font-size:10px;
+  }
+
+  .map-tooltip {
+
+    width:150px;
+
+    padding:11px 12px;
+
+  }
+
+
+  .tooltip-country {
+
+    font-size:15px;
+
+  }
+
+
+  .tooltip-flag {
+
+    font-size:17px;
+
+  }
+
+
+  .tooltip-text {
+
+    font-size:10px;
+
+  }
+
+
+  .tooltip-action {
+
+    font-size:10px;
+
+  }
+
+
+  .map-hint {
+
+    font-size:11px;
+
+  }
+
+
+  .journey-stats {
+
+    grid-template-columns:1fr;
+
+    gap:10px;
+
+  }
+
+
+  .cards {
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .card {
+
+    min-height:330px;
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce) {
+
+  html {
+
+    scroll-behavior:auto;
+
+  }
+
+  *,
+
+  *::before,
+
+  *::after {
+
+    animation:none !important;
+
+    transition:none !important;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav>
+
+
+<a
+href="#home"
+class="logo">
+
+<img
+src="images/ybk-logo.png"
+alt="YBK - Yasser Bilal Kiani">
+
+</a>
+
+
+<div class="nav-links">
+
+
+<a href="#home">
+
+Home
+
+</a>
+
+
+<a href="#journey">
+
+Journey
+
+</a>
+
+
+<a href="#socials">
+
+Follow
+
+</a>
+
+
+<a
+href="https://www.youtube.com/@yasserbilalkiani"
+target="_blank"
+rel="noopener noreferrer">
+
+Videos
+
+</a>
+
+
+</div>
+
+
+</nav>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+class="hero"
+id="home">
+
+
+<div class="hero-content">
+
+
+<img
+src="images/ybk-logo.png"
+class="hero-logo"
+alt="YBK - Yasser Bilal Kiani">
+
+
+<div class="mini-title">
+
+Explore • Experience • Remember
+
+</div>
+
+
+<h1 class="travel-title">
+
+<span>
+
+Travel Diaries
+
+</span>
+
+</h1>
+
+
+<p class="hero-description">
+
+Exploring places, cultures and unforgettable experiences.
+Follow the journey through photographs, travel stories,
+videos and memorable moments from around the world.
+
+</p>
+
+
+<div class="social-buttons">
+
+
+<a
+class="social-btn"
+href="https://www.instagram.com/ybktraveldiaries/"
+target="_blank"
+rel="noopener noreferrer">
+
+<i class="fa-brands fa-instagram"></i>
+
+Instagram
+
+</a>
+
+
+<a
+class="social-btn"
+href="https://www.youtube.com/@yasserbilalkiani"
+target="_blank"
+rel="noopener noreferrer">
+
+<i class="fa-brands fa-youtube"></i>
+
+YouTube
+
+</a>
+
+
+<a
+class="social-btn"
+href="https://www.threads.com/@ybktraveldiaries"
+target="_blank"
+rel="noopener noreferrer">
+
+<i class="fa-brands fa-threads"></i>
+
+Threads
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+<div class="scroll">
+
+SCROLL ↓
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     INTERACTIVE WORLD MAP
+========================================================= -->
+
+<section
+class="section journey-section"
+id="journey">
+
+
+<div class="section-heading">
+
+
+<small>
+
+Our Journey So Far
+
+</small>
+
+
+<h2>
+
+From Qatar to the World
+
+</h2>
+
+
+<p>
+
+Every destination adds another story to the journey.
+Hover over a destination — or tap it on mobile —
+to discover the places visited by YBK Travel Diaries.
+
+</p>
+
+
+</div>
+
+
+
+<div class="map-shell">
+
+
+<div class="map-topbar">
+
+
+<div class="map-key">
+
+
+<div class="key-item">
+
+<span class="key-dot hub"></span>
+
+Qatar Hub
+
+</div>
+
+
+<div class="key-item">
+
+<span class="key-dot"></span>
+
+Visited Destination
+
+</div>
+
+
+</div>
+
+
+<div
+class="map-counter"
+id="mapCounter">
+
+6 Countries Visited
+
+</div>
+
+
+</div>
+
+
+
+<div
+class="map-stage"
+id="mapStage">
+
+
+<!-- =====================================================
+     ZOOMABLE MAP LAYER
+     The map, routes and markers move together.
+===================================================== -->
+
+<div class="zoom-layer" id="zoomLayer">
+
+<!-- =====================================================
+     REAL ROBINSON WORLD MAP
+===================================================== -->
+
+<img
+src="images/world-map.svg"
+class="real-world-map"
+alt="World map showing destinations visited by YBK Travel Diaries"
+draggable="false">
+
+
+<!-- =====================================================
+     ROUTES
+===================================================== -->
+
+<svg
+class="route-overlay"
+viewBox="0 0 2048 1039"
+preserveAspectRatio="xMidYMid meet"
+aria-hidden="true">
+
+<g id="routeLayer"></g>
+
+</svg>
+
+
+<!-- =====================================================
+     DESTINATION MARKERS
+===================================================== -->
+
+<div id="markerLayer"></div>
+
+
+<!-- =====================================================
+     QATAR HUB
+===================================================== -->
+
+<div
+class="qatar-marker"
+id="qatarMarker">
+
+
+<div class="qatar-dot"></div>
+
+
+<div class="qatar-label">
+
+🇶🇦 Qatar • Our Hub
+
+</div>
+
+
+</div>
+
+</div>
+
+<!-- =====================================================
+     ZOOM CONTROLS
+===================================================== -->
+
+<div class="zoom-controls" aria-label="Map zoom controls">
+  <button class="zoom-btn" id="zoomIn" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+  <button class="zoom-btn" id="zoomOut" type="button" aria-label="Zoom out" title="Zoom out">−</button>
+  <button class="zoom-btn" id="zoomReset" type="button" aria-label="Reset map" title="Reset map"><i class="fa-solid fa-house"></i></button>
+  <div class="zoom-level" id="zoomLevel">1×</div>
+</div>
+
+
+<!-- =====================================================
+     HOVER / TAP TOOLTIP
+===================================================== -->
+
+<div
+class="map-tooltip above"
+id="mapTooltip">
+
+
+<div class="tooltip-country">
+
+
+<span
+class="tooltip-flag"
+id="tooltipFlag">
+</span>
+
+
+<span
+id="tooltipCountry">
+</span>
+
+
+</div>
+
+
+<span
+class="tooltip-text"
+id="tooltipText">
+</span>
+
+
+<span
+class="tooltip-action"
+id="tooltipAction">
+</span>
+
+
+</div>
+
+
+</div>
+
+
+<div class="map-hint">
+
+<i class="fa-solid fa-location-dot"></i>
+
+Hover to explore • Scroll or pinch to zoom • Drag to move
+
+</div>
+
+
+</div>
+
+
+
+<div class="journey-stats">
+
+
+<div class="stat">
+
+
+<strong id="countryCount">
+
+6
+
+</strong>
+
+
+<span>
+
+Countries Visited
+
+</span>
+
+
+</div>
+
+
+<div class="stat">
+
+
+<strong>
+
+Qatar
+
+</strong>
+
+
+<span>
+
+Our Travel Hub
+
+</span>
+
+
+</div>
+
+
+<div class="stat">
+
+
+<strong>
+
+∞
+
+</strong>
+
+
+<span>
+
+More Stories Ahead
+
+</span>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     SOCIAL SECTION
+========================================================= -->
+
+<section
+class="section social-section"
+id="socials">
+
+
+<div class="section-heading">
+
+
+<small>
+
+Follow the Journey
+
+</small>
+
+
+<h2>
+
+Travel With YBK
+
+</h2>
+
+
+<p>
+
+Follow YBK Travel Diaries across our social platforms
+for travel photography, videos, stories and new destinations.
+
+</p>
+
+
+</div>
+
+
+
+<div class="cards">
+
+
+<!-- INSTAGRAM -->
+
+<a
+class="card"
+href="https://www.instagram.com/ybktraveldiaries/"
+target="_blank"
+rel="noopener noreferrer">
+
+
+<div>
+
+
+<div class="card-icon">
+
+<i class="fa-brands fa-instagram"></i>
+
+</div>
+
+
+<h3>
+
+Instagram
+
+</h3>
+
+
+<p>
+
+Discover travel photography,
+beautiful destinations,
+reels and memorable moments
+from our journeys.
+
+</p>
+
+
+</div>
+
+
+<div class="visit">
+
+Explore Instagram
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</div>
+
+
+</a>
+
+
+
+<!-- YOUTUBE -->
+
+<a
+class="card"
+href="https://www.youtube.com/@yasserbilalkiani"
+target="_blank"
+rel="noopener noreferrer">
+
+
+<div>
+
+
+<div class="card-icon">
+
+<i class="fa-brands fa-youtube"></i>
+
+</div>
+
+
+<h3>
+
+YouTube
+
+</h3>
+
+
+<p>
+
+Watch travel videos,
+destination experiences
+and adventures from
+YBK Travel Diaries.
+
+</p>
+
+
+</div>
+
+
+<div class="visit">
+
+Watch on YouTube
+
+<i class="fa-solid fa-play"></i>
+
+</div>
+
+
+</a>
+
+
+
+<!-- THREADS -->
+
+<a
+class="card"
+href="https://www.threads.com/@ybktraveldiaries"
+target="_blank"
+rel="noopener noreferrer">
+
+
+<div>
+
+
+<div class="card-icon">
+
+<i class="fa-brands fa-threads"></i>
+
+</div>
+
+
+<h3>
+
+Threads
+
+</h3>
+
+
+<p>
+
+Follow quick travel updates,
+thoughts, recommendations
+and stories along the way.
+
+</p>
+
+
+</div>
+
+
+<div class="visit">
+
+Join the Conversation
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</div>
+
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     BANNER
+========================================================= -->
+
+<section class="travel-banner">
+
+
+<h2>
+
+The world is full of stories.
+
+<span>
+
+Let's discover them.
+
+</span>
+
+</h2>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+
+<img
+src="images/ybk-logo.png"
+class="footer-logo"
+alt="YBK - Yasser Bilal Kiani">
+
+
+<div class="footer-socials">
+
+
+<a
+href="https://www.instagram.com/ybktraveldiaries/"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Instagram">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+
+<a
+href="https://www.youtube.com/@yasserbilalkiani"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="YouTube">
+
+<i class="fa-brands fa-youtube"></i>
+
+</a>
+
+
+<a
+href="https://www.threads.com/@ybktraveldiaries"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Threads">
+
+<i class="fa-brands fa-threads"></i>
+
+</a>
+
+
+</div>
+
+
+<p>
+
+© <span id="year"></span>
+YBK Travel Diaries.
+All rights reserved.
+
+</p>
+
+
+</footer>
+
+
+
+<script>
+
+
+/* =========================================================
+   CURRENT YEAR
+========================================================= */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+
+/* =========================================================
+   ROBINSON MAP
+========================================================= */
+
+const MAP_WIDTH = 2048;
+
+const MAP_HEIGHT = 1039;
+
+
+
+const ROBINSON_X = [
+
+1.0000,
+0.9986,
+0.9954,
+0.9900,
+0.9822,
+0.9730,
+0.9600,
+0.9427,
+0.9216,
+0.8962,
+0.8679,
+0.8350,
+0.7986,
+0.7597,
+0.7186,
+0.6732,
+0.6213,
+0.5722,
+0.5322
+
+];
+
+
+const ROBINSON_Y = [
+
+0.0000,
+0.0620,
+0.1240,
+0.1860,
+0.2480,
+0.3100,
+0.3720,
+0.4340,
+0.4958,
+0.5571,
+0.6176,
+0.6769,
+0.7346,
+0.7903,
+0.8435,
+0.8936,
+0.9394,
+0.9761,
+1.0000
+
+];
+
+
+
+/* =========================================================
+   CONVERT LATITUDE / LONGITUDE TO ROBINSON POSITION
+========================================================= */
+
+function robinsonProject(
+latitude,
+longitude
+) {
+
+
+const sign =
+latitude < 0 ? -1 : 1;
+
+
+const absLat =
+Math.abs(latitude);
+
+
+const index =
+Math.min(
+Math.floor(absLat / 5),
+17
+);
+
+
+const fraction =
+(
+absLat -
+index * 5
+) / 5;
+
+
+const xFactor =
+
+ROBINSON_X[index]
+
++
+
+(
+ROBINSON_X[index + 1]
+-
+ROBINSON_X[index]
+)
+
+*
+
+fraction;
+
+
+const yFactor =
+
+ROBINSON_Y[index]
+
++
+
+(
+ROBINSON_Y[index + 1]
+-
+ROBINSON_Y[index]
+)
+
+*
+
+fraction;
+
+
+const projectedX =
+
+0.8487
+
+*
+
+longitude
+
+*
+
+Math.PI / 180
+
+*
+
+xFactor;
+
+
+const projectedY =
+
+1.3523
+
+*
+
+yFactor
+
+*
+
+sign;
+
+
+const maxX =
+0.8487 * Math.PI;
+
+
+const maxY =
+1.3523;
+
+
+const xPercent =
+
+50
+
++
+
+(
+projectedX /
+(2 * maxX)
+)
+
+*
+
+100;
+
+
+const yPercent =
+
+50
+
+-
+
+(
+projectedY /
+(2 * maxY)
+)
+
+*
+
+100;
+
+
+return {
+
+x:xPercent,
+
+y:yPercent
+
+};
+
+
+}
+
+
+
+/* =========================================================
+   QATAR HUB
+========================================================= */
+
+const QATAR = {
+
+country:"Qatar",
+
+flag:"🇶🇦",
+
+lat:25.2854,
+
+lon:51.5310
+
+};
+
+
+
+/* =========================================================
+   ⭐ FUTURE DESTINATIONS ⭐
+
+   ADD NEW COUNTRIES HERE ONLY.
+
+   tooltipPosition can be:
+
+   "above"
+   "below"
+   "left"
+   "right"
+
+   This lets us avoid overlaps in crowded regions.
+========================================================= */
+
+const DESTINATIONS = [
+
+
+{
+
+country:"Pakistan",
+
+flag:"🇵🇰",
+
+lat:30.3753,
+
+lon:69.3451,
+
+tooltipPosition:"right",
+
+text:
+"Explored by YBK Travel Diaries",
+
+link:""
+
+},
+
+
+{
+
+country:"Norway",
+
+flag:"🇳🇴",
+
+lat:60.4720,
+
+lon:8.4689,
+
+tooltipPosition:"above",
+
+text:
+"Explored by YBK Travel Diaries",
+
+link:""
+
+},
+
+
+{
+
+country:"Georgia",
+
+flag:"🇬🇪",
+
+lat:42.3154,
+
+lon:43.3569,
+
+tooltipPosition:"left",
+
+text:
+"Explored by YBK Travel Diaries",
+
+link:""
+
+},
+
+
+{
+
+country:"Saudi Arabia",
+
+flag:"🇸🇦",
+
+lat:23.8859,
+
+lon:45.0792,
+
+tooltipPosition:"left",
+
+text:
+"Explored by YBK Travel Diaries",
+
+link:""
+
+},
+
+
+{
+
+country:"Azerbaijan",
+
+flag:"🇦🇿",
+
+lat:40.1431,
+
+lon:47.5769,
+
+tooltipPosition:"right",
+
+text:
+"Explored by YBK Travel Diaries",
+
+link:""
+
+},
+
+
+{
+
+country:"Maldives",
+
+flag:"🇲🇻",
+
+lat:3.2028,
+
+lon:73.2207,
+
+tooltipPosition:"below",
+
+text:
+"Explored by YBK Travel Diaries",
+
+link:""
+
+}
+
+
+];
+
+
+
+/* =========================================================
+   QATAR POSITION
+========================================================= */
+
+const qatarPosition =
+
+robinsonProject(
+
+QATAR.lat,
+
+QATAR.lon
+
+);
+
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const mapStage =
+document.getElementById(
+"mapStage"
+);
+
+
+const zoomLayer =
+document.getElementById(
+"zoomLayer"
+);
+
+
+const zoomInButton =
+document.getElementById(
+"zoomIn"
+);
+
+
+const zoomOutButton =
+document.getElementById(
+"zoomOut"
+);
+
+
+const zoomResetButton =
+document.getElementById(
+"zoomReset"
+);
+
+
+const zoomLevelDisplay =
+document.getElementById(
+"zoomLevel"
+);
+
+
+const routeLayer =
+document.getElementById(
+"routeLayer"
+);
+
+
+const markerLayer =
+document.getElementById(
+"markerLayer"
+);
+
+
+const qatarMarker =
+document.getElementById(
+"qatarMarker"
+);
+
+
+const tooltip =
+document.getElementById(
+"mapTooltip"
+);
+
+
+const tooltipFlag =
+document.getElementById(
+"tooltipFlag"
+);
+
+
+const tooltipCountry =
+document.getElementById(
+"tooltipCountry"
+);
+
+
+const tooltipText =
+document.getElementById(
+"tooltipText"
+);
+
+
+const tooltipAction =
+document.getElementById(
+"tooltipAction"
+);
+
+
+
+/* =========================================================
+   POSITION QATAR
+========================================================= */
+
+qatarMarker.style.left =
+qatarPosition.x + "%";
+
+
+qatarMarker.style.top =
+qatarPosition.y + "%";
+
+
+
+/* =========================================================
+   COUNTRY COUNT
+========================================================= */
+
+document.getElementById(
+"countryCount"
+).textContent =
+DESTINATIONS.length;
+
+
+document.getElementById(
+"mapCounter"
+).textContent =
+
+DESTINATIONS.length +
+
+(
+DESTINATIONS.length === 1
+
+? " Country Visited"
+
+: " Countries Visited"
+
+);
+
+
+
+/* =========================================================
+   CREATE FLIGHT ROUTE
+========================================================= */
+
+function createRoute(
+destination,
+index
+) {
+
+
+const destinationPosition =
+
+robinsonProject(
+
+destination.lat,
+
+destination.lon
+
+);
+
+
+const startX =
+
+(qatarPosition.x / 100)
+
+*
+
+MAP_WIDTH;
+
+
+const startY =
+
+(qatarPosition.y / 100)
+
+*
+
+MAP_HEIGHT;
+
+
+const endX =
+
+(destinationPosition.x / 100)
+
+*
+
+MAP_WIDTH;
+
+
+const endY =
+
+(destinationPosition.y / 100)
+
+*
+
+MAP_HEIGHT;
+
+
+const middleX =
+
+(startX + endX) / 2;
+
+
+const distance =
+
+Math.sqrt(
+
+Math.pow(
+endX - startX,
+2
+)
+
++
+
+Math.pow(
+endY - startY,
+2
+)
+
+);
+
+
+const curveHeight =
+
+Math.max(
+
+25,
+
+Math.min(
+
+150,
+
+distance * .20
+
+)
+
+);
+
+
+const middleY =
+
+Math.min(
+startY,
+endY
+)
+
+-
+
+curveHeight;
+
+
+const path =
+
+document.createElementNS(
+
+"http://www.w3.org/2000/svg",
+
+"path"
+
+);
+
+
+path.setAttribute(
+
+"d",
+
+`M ${startX} ${startY}
+ Q ${middleX} ${middleY}
+ ${endX} ${endY}`
+
+);
+
+
+path.setAttribute(
+
+"class",
+
+"travel-route"
+
+);
+
+
+path.dataset.route =
+index;
+
+
+routeLayer.appendChild(
+path
+);
+
+
+}
+
+
+
+/* =========================================================
+   INTERACTIVE MAP ZOOM / PAN
+========================================================= */
+
+const MIN_ZOOM = 1;
+const MAX_ZOOM = 4;
+const ZOOM_STEP = 0.5;
+
+let zoomScale = 1;
+let panX = 0;
+let panY = 0;
+let isDragging = false;
+let dragMoved = false;
+let dragStartX = 0;
+let dragStartY = 0;
+let startPanX = 0;
+let startPanY = 0;
+let activePointers = new Map();
+let pinchStartDistance = 0;
+let pinchStartScale = 1;
+let pinchStartCenter = null;
+
+function clampPan() {
+  const width = mapStage.clientWidth;
+  const height = mapStage.clientHeight;
+  const minX = width - width * zoomScale;
+  const minY = height - height * zoomScale;
+  panX = Math.min(0, Math.max(minX, panX));
+  panY = Math.min(0, Math.max(minY, panY));
+}
+
+function updateMapTransform() {
+  clampPan();
+  zoomLayer.style.transform = `translate(${panX}px, ${panY}px) scale(${zoomScale})`;
+  zoomLevelDisplay.textContent = Number.isInteger(zoomScale) ? `${zoomScale}×` : `${zoomScale.toFixed(1)}×`;
+  hideTooltip();
+}
+
+function zoomAt(newScale, clientX, clientY) {
+  newScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, newScale));
+  if (newScale === zoomScale) return;
+
+  const rect = mapStage.getBoundingClientRect();
+  const focusX = clientX == null ? rect.width / 2 : clientX - rect.left;
+  const focusY = clientY == null ? rect.height / 2 : clientY - rect.top;
+  const mapX = (focusX - panX) / zoomScale;
+  const mapY = (focusY - panY) / zoomScale;
+
+  zoomScale = newScale;
+  panX = focusX - mapX * zoomScale;
+  panY = focusY - mapY * zoomScale;
+  updateMapTransform();
+}
+
+function resetMap() {
+  zoomScale = 1;
+  panX = 0;
+  panY = 0;
+  updateMapTransform();
+}
+
+zoomInButton.addEventListener("click", event => {
+  event.stopPropagation();
+  zoomAt(zoomScale + ZOOM_STEP);
+});
+
+zoomOutButton.addEventListener("click", event => {
+  event.stopPropagation();
+  zoomAt(zoomScale - ZOOM_STEP);
+});
+
+zoomResetButton.addEventListener("click", event => {
+  event.stopPropagation();
+  resetMap();
+});
+
+mapStage.addEventListener("wheel", event => {
+  event.preventDefault();
+  const direction = event.deltaY < 0 ? ZOOM_STEP : -ZOOM_STEP;
+  zoomAt(zoomScale + direction, event.clientX, event.clientY);
+}, { passive:false });
+
+function pointerDistance(a, b) {
+  return Math.hypot(a.x - b.x, a.y - b.y);
+}
+
+function pointerCenter(a, b) {
+  return { x:(a.x + b.x)/2, y:(a.y + b.y)/2 };
+}
+
+mapStage.addEventListener("pointerdown", event => {
+  if (event.target.closest(".zoom-controls")) return;
+  activePointers.set(event.pointerId, {x:event.clientX, y:event.clientY});
+  mapStage.setPointerCapture(event.pointerId);
+
+  if (activePointers.size === 1) {
+    isDragging = true;
+    dragMoved = false;
+    dragStartX = event.clientX;
+    dragStartY = event.clientY;
+    startPanX = panX;
+    startPanY = panY;
+    mapStage.classList.add("dragging");
+  } else if (activePointers.size === 2) {
+    const pts = [...activePointers.values()];
+    pinchStartDistance = pointerDistance(pts[0], pts[1]);
+    pinchStartScale = zoomScale;
+    pinchStartCenter = pointerCenter(pts[0], pts[1]);
+  }
+});
+
+mapStage.addEventListener("pointermove", event => {
+  if (!activePointers.has(event.pointerId)) return;
+  activePointers.set(event.pointerId, {x:event.clientX, y:event.clientY});
+
+  if (activePointers.size === 2) {
+    const pts = [...activePointers.values()];
+    const distance = pointerDistance(pts[0], pts[1]);
+    const center = pointerCenter(pts[0], pts[1]);
+    const targetScale = pinchStartScale * (distance / pinchStartDistance);
+    zoomAt(targetScale, center.x, center.y);
+    dragMoved = true;
+    return;
+  }
+
+  if (isDragging && zoomScale > 1) {
+    const dx = event.clientX - dragStartX;
+    const dy = event.clientY - dragStartY;
+    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) dragMoved = true;
+    panX = startPanX + dx;
+    panY = startPanY + dy;
+    updateMapTransform();
+  }
+});
+
+function endPointer(event) {
+  activePointers.delete(event.pointerId);
+  if (activePointers.size < 2) pinchStartDistance = 0;
+  if (activePointers.size === 0) {
+    isDragging = false;
+    mapStage.classList.remove("dragging");
+  } else if (activePointers.size === 1) {
+    const remaining = [...activePointers.values()][0];
+    dragStartX = remaining.x;
+    dragStartY = remaining.y;
+    startPanX = panX;
+    startPanY = panY;
+  }
+}
+
+mapStage.addEventListener("pointerup", endPointer);
+mapStage.addEventListener("pointercancel", endPointer);
+
+window.addEventListener("resize", () => {
+  clampPan();
+  updateMapTransform();
+});
+
+function transformedTooltipPosition(position) {
+  const baseX = mapStage.clientWidth * position.x / 100;
+  const baseY = mapStage.clientHeight * position.y / 100;
+  return {
+    x: panX + baseX * zoomScale,
+    y: panY + baseY * zoomScale
+  };
+}
+
+/* =========================================================
+   SHOW TOOLTIP
+========================================================= */
+
+function showTooltip(
+destination,
+marker,
+index,
+position
+) {
+
+
+document
+.querySelectorAll(
+".destination-marker"
+)
+.forEach(
+item =>
+item.classList.remove(
+"active"
+)
+);
+
+
+document
+.querySelectorAll(
+".travel-route"
+)
+.forEach(
+item =>
+item.classList.remove(
+"active"
+)
+);
+
+
+marker.classList.add(
+"active"
+);
+
+
+const route =
+
+document.querySelector(
+`[data-route="${index}"]`
+);
+
+
+if(route) {
+
+route.classList.add(
+"active"
+);
+
+}
+
+
+/*
+   COUNTRY INFORMATION
+*/
+
+tooltipFlag.textContent =
+destination.flag;
+
+
+tooltipCountry.textContent =
+destination.country;
+
+
+tooltipText.textContent =
+destination.text;
+
+
+tooltipAction.textContent =
+
+destination.link
+
+? "View the Journey →"
+
+: "Visited by YBK ✓";
+
+
+/*
+   PLACE TOOLTIP AT COUNTRY
+*/
+
+const tooltipPosition =
+transformedTooltipPosition(position);
+
+
+tooltip.style.left =
+tooltipPosition.x + "px";
+
+
+tooltip.style.top =
+tooltipPosition.y + "px";
+
+
+/*
+   REMOVE OLD DIRECTION
+*/
+
+tooltip.classList.remove(
+
+"above",
+"below",
+"left",
+"right"
+
+);
+
+
+/*
+   ADD COUNTRY-SPECIFIC
+   TOOLTIP DIRECTION
+*/
+
+tooltip.classList.add(
+
+destination.tooltipPosition
+||
+"above"
+
+);
+
+
+tooltip.classList.add(
+"show"
+);
+
+
+}
+
+
+
+/* =========================================================
+   HIDE TOOLTIP
+========================================================= */
+
+function hideTooltip() {
+
+
+tooltip.classList.remove(
+"show"
+);
+
+
+document
+.querySelectorAll(
+".destination-marker"
+)
+.forEach(
+item =>
+item.classList.remove(
+"active"
+)
+);
+
+
+document
+.querySelectorAll(
+".travel-route"
+)
+.forEach(
+item =>
+item.classList.remove(
+"active"
+)
+);
+
+
+}
+
+
+
+/* =========================================================
+   CREATE DESTINATIONS
+
+   IMPORTANT:
+   NO permanent country-name labels are generated.
+========================================================= */
+
+DESTINATIONS.forEach(
+(destination,index) => {
+
+
+const position =
+
+robinsonProject(
+
+destination.lat,
+
+destination.lon
+
+);
+
+
+/*
+   ROUTE
+*/
+
+createRoute(
+destination,
+index
+);
+
+
+/*
+   DOT
+*/
+
+const marker =
+
+document.createElement(
+"button"
+);
+
+
+marker.className =
+"destination-marker";
+
+
+marker.style.left =
+position.x + "%";
+
+
+marker.style.top =
+position.y + "%";
+
+
+marker.setAttribute(
+
+"aria-label",
+
+"Show " +
+destination.country
+
+);
+
+
+marker.setAttribute(
+
+"title",
+
+destination.country
+
+);
+
+
+marker.innerHTML = `
+
+<span class="marker-ring">
+
+<span class="marker-core"></span>
+
+</span>
+
+`;
+
+
+/* =====================================================
+   DESKTOP HOVER
+===================================================== */
+
+marker.addEventListener(
+"mouseenter",
+() => {
+
+
+showTooltip(
+
+destination,
+
+marker,
+
+index,
+
+position
+
+);
+
+
+}
+);
+
+
+marker.addEventListener(
+"mouseleave",
+() => {
+
+
+hideTooltip();
+
+
+}
+);
+
+
+/* =====================================================
+   KEYBOARD
+===================================================== */
+
+marker.addEventListener(
+"focus",
+() => {
+
+
+showTooltip(
+
+destination,
+
+marker,
+
+index,
+
+position
+
+);
+
+
+}
+);
+
+
+marker.addEventListener(
+"blur",
+() => {
+
+
+hideTooltip();
+
+
+}
+);
+
+
+/* =====================================================
+   MOBILE TAP
+===================================================== */
+
+marker.addEventListener(
+"click",
+event => {
+
+
+event.stopPropagation();
+
+
+showTooltip(
+
+destination,
+
+marker,
+
+index,
+
+position
+
+);
+
+
+if(
+destination.link
+) {
+
+
+setTimeout(
+() => {
+
+
+window.open(
+
+destination.link,
+
+"_blank",
+
+"noopener,noreferrer"
+
+);
+
+
+},
+
+250
+);
+
+
+}
+
+
+}
+);
+
+
+markerLayer.appendChild(
+marker
+);
+
+
+}
+);
+
+
+
+/* =========================================================
+   CLOSE MOBILE TOOLTIP
+========================================================= */
+
+mapStage.addEventListener(
+"click",
+event => {
+
+
+if (dragMoved) {
+  dragMoved = false;
+  return;
+}
+
+if(
+
+!event.target.closest(
+".destination-marker"
+)
+
+) {
+
+
+hideTooltip();
+
+
+}
+
+
+}
+);
+
+
+
+resetMap();
+
+
+/* =========================================================
+   SOCIAL CARD SCROLL ANIMATION
+========================================================= */
+
+const cards =
+
+document.querySelectorAll(
+".card"
+);
+
+
+const reducedMotion =
+
+window.matchMedia(
+
+"(prefers-reduced-motion: reduce)"
+
+).matches;
+
+
+if(
+!reducedMotion
+) {
+
+
+const observer =
+
+new IntersectionObserver(
+
+entries => {
+
+
+entries.forEach(
+entry => {
+
+
+if(
+entry.isIntersecting
+) {
+
+
+entry.target.style.opacity =
+"1";
+
+
+entry.target.style.transform =
+"translateY(0)";
+
+
+observer.unobserve(
+entry.target
+);
+
+
+}
+
+
+}
+);
+
+
+},
+
+{
+
+threshold:.15
+
+}
+
+);
+
+
+cards.forEach(
+card => {
+
+
+card.style.opacity =
+"0";
+
+
+card.style.transform =
+"translateY(35px)";
+
+
+observer.observe(
+card
+);
+
+
+}
+);
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
